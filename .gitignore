@@ -1,0 +1,15 @@
+**/node_modules
+app/
+node_modules
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+packages/web-build/
+packages/web-report/
+
+# macOS
+packages/.DS_Store
+packages/package-lock.json

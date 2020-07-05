@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Theme provider Should override theme with hoc 1`] = `
+<_default
+  theme={
+    Object {
+      "palette": Object {
+        "accent": "red",
+      },
+    }
+  }
+>
+  <Component>
+    <Component
+      theme={
+        Object {
+          "palette": Object {
+            "accent": "red",
+          },
+          "paletteDark": Object {
+            "accent": "#b626e2",
+            "primary": "#494949",
+            "secondary": "#727272",
+            "text": Object {
+              "primary": "#f2f2f2",
+              "secondary": "#333333",
+            },
+          },
+          "typography": Object {
+            "fontSize": Object {
+              "big": 43,
+              "header": 50,
+              "medium": 45,
+              "normal": 36,
+              "small": 27,
+            },
+            "primaryFont": undefined,
+          },
+        }
+      }
+    >
+      <View>
+        <View />
+      </View>
+    </Component>
+  </Component>
+</_default>
+`;
+
+exports[`Theme provider Should override theme with hook 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "palette": Object {
+        "accent": "red",
+      },
+      "paletteDark": Object {
+        "accent": "#b626e2",
+        "primary": "#494949",
+        "secondary": "#727272",
+        "text": Object {
+          "primary": "#f2f2f2",
+          "secondary": "#333333",
+        },
+      },
+      "typography": Object {
+        "fontSize": Object {
+          "big": 43,
+          "header": 50,
+          "medium": 45,
+          "normal": 36,
+          "small": 27,
+        },
+        "primaryFont": undefined,
+      },
+    }
+  }
+>
+  <Component />
+</ContextProvider>
+`;
