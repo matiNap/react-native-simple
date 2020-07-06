@@ -9,42 +9,42 @@ import useTheme from '../useTheme';
 import withTheme from '../withTheme';
 
 describe('Theme provider', () => {
-  it('Should override theme with hook', () => {
-    const wrapper = shallow(
-      <ThemeProvider
-        theme={{
-          palette: {
-            accent: 'red',
-          },
-        }}
-      >
-        {() => {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const theme = useTheme();
-          return <View />;
-        }}
-      </ThemeProvider>,
-    );
-    expect(wrapper.length).toBe(1);
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
-
-  it('Should override theme with hoc', () => {
-    const Child = withTheme(() => {
-      return <View />;
+    it('Should override theme with hook', () => {
+        const wrapper = shallow(
+            <ThemeProvider
+                theme={{
+                    palette: {
+                        accent: 'red',
+                    },
+                }}
+            >
+                {() => {
+                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                    const theme = useTheme();
+                    return <View />;
+                }}
+            </ThemeProvider>,
+        );
+        expect(wrapper.length).toBe(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
-    const wrapper = mount(
-      <ThemeProvider
-        theme={{
-          palette: {
-            accent: 'red',
-          },
-        }}
-      >
-        <Child />
-      </ThemeProvider>,
-    );
-    expect(wrapper.length).toBe(1);
-    expect(toJson(wrapper)).toMatchSnapshot();
-  });
+
+    it('Should override theme with hoc', () => {
+        const Child = withTheme(() => {
+            return <View />;
+        });
+        const wrapper = mount(
+            <ThemeProvider
+                theme={{
+                    palette: {
+                        accent: 'red',
+                    },
+                }}
+            >
+                <Child />
+            </ThemeProvider>,
+        );
+        expect(wrapper.length).toBe(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
