@@ -41,5 +41,5 @@ jobs:
                   name: Node deployment
                   command: |
                       if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                          npm run semantic-relase
+                          npm run semantic-release
                       fi
