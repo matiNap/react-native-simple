@@ -24,8 +24,8 @@
   "license": "MIT",
   "homepage": "https://github.com/matiNap/react-native-simple",
   "workspaces": {
-    "package": [
-      "./"
+    "nohoist": [
+      "**"
     ]
   },
   "devDependencies": {
