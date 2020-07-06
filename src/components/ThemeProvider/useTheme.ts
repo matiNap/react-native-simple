@@ -3,7 +3,7 @@ import { ThemeContext } from './index';
 import ThemeType from './ThemeType';
 
 export default (): ThemeType => {
-  const theme = useContext(ThemeContext);
+    const theme = useContext(ThemeContext);
 
-  return theme;
+    return theme;
 };

@@ -1,15 +1,15 @@
-import React, { CSSProperties } from 'react';
-import { StyleSheet, View, StyleProp } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
 
 interface Props {
-  children?: React.ReactNode;
-  style?: StyleProp<CSSProperties>;
+    children?: React.ReactNode;
+    style: StyleProp<ViewStyle>;
 }
 
 export default function Container({ children, style }: Props) {
-  return <View style={[styles.container, style]}>{children}</View>;
+    return <View style={[styles.container, style]}>{children}</View>;
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+    container: { flex: 1 },
 });
