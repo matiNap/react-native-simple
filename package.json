@@ -60,5 +60,11 @@
     "semantic-release-cli": "^5.3.1",
     "typescript": "~3.8.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  }
 }
