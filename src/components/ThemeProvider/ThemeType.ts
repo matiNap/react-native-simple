@@ -20,6 +20,7 @@ interface Typography {
 }
 
 export default interface ThemeType {
+    currentPalette: Palette;
     palette: Palette;
     paletteDark: Palette;
     typography: Typography;

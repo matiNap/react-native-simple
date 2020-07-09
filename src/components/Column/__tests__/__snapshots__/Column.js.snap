@@ -9,7 +9,7 @@ exports[`Column component Should render 1`] = `
       },
       Object {
         "alignSelf": undefined,
-        "backgroundColor": undefined,
+        "backgroundColor": "transparent",
         "height": undefined,
         "justifyContent": undefined,
       },
@@ -28,7 +28,7 @@ exports[`Column component Should render with childs 1`] = `
       },
       Object {
         "alignSelf": undefined,
-        "backgroundColor": undefined,
+        "backgroundColor": "transparent",
         "height": undefined,
         "justifyContent": undefined,
       },
