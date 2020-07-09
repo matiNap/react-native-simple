@@ -1,11 +1,14 @@
 import React, { ReactNode } from 'react';
 import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
+import { pickBackroundPaletteColor } from '../../helpers';
+import useTheme from '../ThemeProvider/useTheme';
+import { SimpleBackgroundColor } from '../../types';
 
 interface Props {
     children: ReactNode[] | ReactNode;
     style?: StyleProp<ViewStyle>;
     borderRadius?: number;
-    backgroundColor?: string;
+    backgroundColor?: SimpleBackgroundColor;
     width?: string;
     justifyContent?:
         | 'space-between'
@@ -34,6 +37,7 @@ export default function ({
     justifyContent,
     align,
 }: Props) {
+    const theme = useTheme();
     return (
         <View
             style={[
@@ -41,7 +45,10 @@ export default function ({
                 {
                     width,
                     justifyContent,
-                    backgroundColor,
+                    backgroundColor: pickBackroundPaletteColor(
+                        theme,
+                        backgroundColor,
+                    ),
                     borderRadius,
                     alignSelf: align,
                 },

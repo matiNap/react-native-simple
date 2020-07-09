@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
 import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
+import { pickBackroundPaletteColor } from '../../helpers';
+import useTheme from '../ThemeProvider/useTheme';
 
 interface Props {
     children: ReactNode[] | ReactNode;
@@ -33,11 +35,20 @@ export default function ({
     children,
     align,
 }: Props) {
+    const theme = useTheme();
     return (
         <View
             style={[
                 styles.container,
-                { justifyContent, height, backgroundColor, alignSelf: align },
+                {
+                    justifyContent,
+                    height,
+                    backgroundColor: pickBackroundPaletteColor(
+                        theme,
+                        backgroundColor,
+                    ),
+                    alignSelf: align,
+                },
                 style,
             ]}
         >
