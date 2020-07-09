@@ -14,8 +14,23 @@ exports[`Theme provider Should override theme with hoc 1`] = `
     <Component
       theme={
         Object {
-          "palette": Object {
+          "currentPalette": Object {
             "accent": "red",
+            "primary": "#ededed",
+            "secondary": "#bfbfbf",
+            "text": Object {
+              "primary": "#333333",
+              "secondary": "#f2f2f2",
+            },
+          },
+          "palette": Object {
+            "accent": "#b626e2",
+            "primary": "#ededed",
+            "secondary": "#bfbfbf",
+            "text": Object {
+              "primary": "#333333",
+              "secondary": "#f2f2f2",
+            },
           },
           "paletteDark": Object {
             "accent": "#b626e2",
@@ -51,8 +66,23 @@ exports[`Theme provider Should override theme with hook 1`] = `
 <ContextProvider
   value={
     Object {
-      "palette": Object {
+      "currentPalette": Object {
         "accent": "red",
+        "primary": "#ededed",
+        "secondary": "#bfbfbf",
+        "text": Object {
+          "primary": "#333333",
+          "secondary": "#f2f2f2",
+        },
+      },
+      "palette": Object {
+        "accent": "#b626e2",
+        "primary": "#ededed",
+        "secondary": "#bfbfbf",
+        "text": Object {
+          "primary": "#333333",
+          "secondary": "#f2f2f2",
+        },
       },
       "paletteDark": Object {
         "accent": "#b626e2",
