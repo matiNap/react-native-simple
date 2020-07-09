@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row component Should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+      },
+      Object {
+        "alignSelf": undefined,
+        "backgroundColor": undefined,
+        "borderRadius": undefined,
+        "justifyContent": undefined,
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Row component Should render with childs 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+      },
+      Object {
+        "alignSelf": undefined,
+        "backgroundColor": undefined,
+        "borderRadius": undefined,
+        "justifyContent": undefined,
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+>
+  <View />
+  <View />
+  <View />
+  <View />
+</View>
+`;
+
+exports[`Row component Should render with style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+      },
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "blue",
+        "borderRadius": undefined,
+        "justifyContent": undefined,
+        "width": undefined,
+      },
+      Object {
+        "backgroundColor": "red",
+      },
+    ]
+  }
+/>
+`;
