@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
-import { pickBackroundPaletteColor, getThemeColor } from '../../helpers';
+import { getThemeColor } from '../../helpers';
 import useTheme from '../ThemeProvider/useTheme';
 
 interface Props {

@@ -6,7 +6,7 @@ exports[`Text component Should render 1`] = `
     Array [
       Object {
         "color": "#333333",
-        "fontSize": undefined,
+        "fontSize": 20,
       },
       undefined,
     ]
@@ -22,7 +22,7 @@ exports[`Text component Should render text color 1`] = `
     Array [
       Object {
         "color": "#333333",
-        "fontSize": undefined,
+        "fontSize": 20,
       },
       undefined,
     ]
@@ -54,7 +54,7 @@ exports[`Text component Should render with style 1`] = `
     Array [
       Object {
         "color": "#333333",
-        "fontSize": undefined,
+        "fontSize": 20,
       },
       Object {
         "backgroundColor": "blue",

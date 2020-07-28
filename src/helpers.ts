@@ -23,5 +23,5 @@ export const getThemeNumber = (
     if (value) {
         if (typeof value === 'number') return value;
         else return data[value];
-    } else defaultValue;
+    } else return defaultValue;
 };
