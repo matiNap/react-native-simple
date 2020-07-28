@@ -1,5 +1,5 @@
-import React, { Children, ReactNode } from 'react';
-import { StyleSheet, Text, View, ViewStyle, StyleProp } from 'react-native';
+import React, { ReactNode } from 'react';
+import { StyleSheet, View, ViewStyle, StyleProp } from 'react-native';
 import metrics from '../../theme/metrics';
 import useTheme from '../ThemeProvider/useTheme';
 import { pickBackroundPaletteColor } from '../../helpers';
