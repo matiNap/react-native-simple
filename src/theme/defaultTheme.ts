@@ -1,6 +1,15 @@
 import { normalize } from '../helpers';
 
 export default {
+    currentPalette: {
+        primary: '#ededed',
+        secondary: '#bfbfbf',
+        accent: '#b626e2',
+        text: {
+            primary: '#333333',
+            secondary: '#f2f2f2',
+        },
+    },
     palette: {
         primary: '#ededed',
         secondary: '#bfbfbf',

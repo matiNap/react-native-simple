@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": undefined,
+        "borderBottomRightRadius": undefined,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Header component Should render child 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": undefined,
+        "borderBottomRightRadius": undefined,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text>
+    A
+  </Text>
+</View>
+`;
+
+exports[`Header component Should render fixed 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": undefined,
+        "borderBottomRightRadius": undefined,
+        "elevation": 7,
+        "height": 160.07999999999998,
+        "left": 0,
+        "paddingTop": 30,
+        "position": "absolute",
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 3,
+          "width": 0,
+        },
+        "shadowOpacity": 0.29,
+        "shadowRadius": 4.65,
+        "top": 0,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Header component Should render multiple childs 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": undefined,
+        "borderBottomRightRadius": undefined,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text>
+    A
+  </Text>
+  <Text>
+    B
+  </Text>
+</View>
+`;
+
+exports[`Header component Should render rounded borders 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": 20,
+        "borderBottomRightRadius": 20,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Header component Should render with new backround color 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#313131",
+        "borderBottomLeftRadius": 20,
+        "borderBottomRightRadius": 20,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Header component Should render with shadow 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": undefined,
+        "borderBottomRightRadius": undefined,
+        "elevation": 7,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 3,
+          "width": 0,
+        },
+        "shadowOpacity": 0.29,
+        "shadowRadius": 4.65,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Header component Should render with style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+        "zIndex": 160,
+      },
+      Object {
+        "backgroundColor": "#b626e2",
+        "borderBottomLeftRadius": undefined,
+        "borderBottomRightRadius": undefined,
+        "height": 160.07999999999998,
+        "paddingTop": 30,
+      },
+      Object {
+        "width": "80%",
+      },
+    ]
+  }
+/>
+`;

@@ -1,5 +1,6 @@
 import Container from './components/Container';
 import Column from './components/Column';
+import Header from './components/Header';
 import Row from './components/Row';
 import ThemeProvider from './components/ThemeProvider';
 import useTheme from './components/ThemeProvider/useTheme';
@@ -14,4 +15,5 @@ export {
     withTheme,
     Row,
     Column,
+    Header,
 };
