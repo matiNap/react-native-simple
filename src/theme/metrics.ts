@@ -1,4 +1,5 @@
-import { Platform, Dimensions, StatusBar } from 'react-native';
+import { Platform, Dimensions, NativeModules } from 'react-native';
+const { StatusBarManager } = NativeModules;
 
 const isIos = Platform.OS === 'ios';
 
@@ -15,6 +16,6 @@ const metrics: {
         height: Dimensions.get('window').height,
         width: Dimensions.get('window').width,
     },
-    statusBarHeight: isIos ? 20 : StatusBar.currentHeight,
+    statusBarHeight: isIos ? 20 : StatusBarManager.HEIGHT,
 };
 export default metrics;
