@@ -24,7 +24,7 @@ exports[`Theme provider Should override theme with hoc 1`] = `
             },
           },
           "palette": Object {
-            "accent": "#b626e2",
+            "accent": "red",
             "primary": "#ededed",
             "secondary": "#bfbfbf",
             "text": Object {
@@ -43,11 +43,10 @@ exports[`Theme provider Should override theme with hoc 1`] = `
           },
           "typography": Object {
             "fontSize": Object {
-              "big": 43,
-              "header": 50,
-              "medium": 45,
-              "normal": 36,
-              "small": 27,
+              "big": 27,
+              "medium": 25,
+              "normal": 20,
+              "small": 15,
             },
             "primaryFont": undefined,
           },
@@ -76,7 +75,7 @@ exports[`Theme provider Should override theme with hook 1`] = `
         },
       },
       "palette": Object {
-        "accent": "#b626e2",
+        "accent": "red",
         "primary": "#ededed",
         "secondary": "#bfbfbf",
         "text": Object {
@@ -95,11 +94,10 @@ exports[`Theme provider Should override theme with hook 1`] = `
       },
       "typography": Object {
         "fontSize": Object {
-          "big": 43,
-          "header": 50,
-          "medium": 45,
-          "normal": 36,
-          "small": 27,
+          "big": 27,
+          "medium": 25,
+          "normal": 20,
+          "small": 15,
         },
         "primaryFont": undefined,
       },

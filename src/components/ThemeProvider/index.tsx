@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import ThemeType from './ThemeType';
 import defaultTheme from '../../theme/defaultTheme';
+import _ from 'lodash';
 
 export const ThemeContext = React.createContext<ThemeType>(defaultTheme);
 
@@ -10,27 +11,16 @@ interface Props {
     darkMode: undefined | boolean;
 }
 
-const consctructTheme = (theme: ThemeType, key: 'palette' | 'paletteDark') => {
-    return {
-        ...defaultTheme,
-        currentPalette: {
-            ...defaultTheme[key],
-            ...theme[key],
-        },
-    };
-};
-
 const createCurrentTheme = (
     theme: ThemeType,
     darkMode: boolean | undefined,
 ) => {
-    if (theme && darkMode) {
-        return consctructTheme(theme, 'paletteDark');
-    } else if (theme && !darkMode) {
-        return consctructTheme(theme, 'palette');
-    } else if (!theme && darkMode) {
-        return consctructTheme(defaultTheme, 'paletteDark');
-    } else return consctructTheme(defaultTheme, 'palette');
+    const currentPaletteKey = darkMode ? 'paletteDark' : 'palette';
+    const currentPalette = theme[currentPaletteKey]
+        ? theme[currentPaletteKey]
+        : defaultTheme[currentPaletteKey];
+
+    return _.merge(defaultTheme, { ...theme, currentPalette });
 };
 
 export default ({ theme, children, darkMode }: Props) => {

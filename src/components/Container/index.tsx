@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
 import { SimpleBackgroundColor } from '../../types';
-import { pickBackroundPaletteColor } from '../../helpers';
+import { getThemeColor } from '../../helpers';
 import useTheme from '../ThemeProvider/useTheme';
 
 interface Props {
@@ -18,9 +18,10 @@ export default function Container({ children, style, backgroundColor }: Props) {
             style={[
                 styles.container,
                 {
-                    backgroundColor: pickBackroundPaletteColor(
-                        theme,
+                    backgroundColor: getThemeColor(
                         backgroundColor,
+                        theme.currentPalette,
+                        theme.currentPalette.primary,
                     ),
                 },
                 style,

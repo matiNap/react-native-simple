@@ -9,7 +9,7 @@ exports[`Column component Should render 1`] = `
       },
       Object {
         "alignSelf": undefined,
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
         "height": undefined,
         "justifyContent": undefined,
       },
@@ -28,7 +28,7 @@ exports[`Column component Should render with childs 1`] = `
       },
       Object {
         "alignSelf": undefined,
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
         "height": undefined,
         "justifyContent": undefined,
       },
@@ -52,7 +52,7 @@ exports[`Column component Should render with style 1`] = `
       },
       Object {
         "alignSelf": "center",
-        "backgroundColor": "blue",
+        "backgroundColor": undefined,
         "height": undefined,
         "justifyContent": undefined,
       },
