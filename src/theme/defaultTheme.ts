@@ -1,5 +1,3 @@
-import { normalize } from '../helpers';
-
 export default {
     currentPalette: {
         primary: '#ededed',
@@ -31,11 +29,10 @@ export default {
     typography: {
         primaryFont: undefined,
         fontSize: {
-            small: normalize(15),
-            normal: normalize(20),
-            medium: normalize(25),
-            big: normalize(24),
-            header: normalize(28),
+            small: 15,
+            normal: 20,
+            medium: 25,
+            big: 27,
         },
     },
 };

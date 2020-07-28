@@ -8,7 +8,7 @@ exports[`Container component Should render 1`] = `
         "flex": 1,
       },
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
       },
       undefined,
     ]
@@ -24,7 +24,7 @@ exports[`Container component Should render with child 1`] = `
         "flex": 1,
       },
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
       },
       undefined,
     ]
@@ -44,7 +44,7 @@ exports[`Container component Should render with style 1`] = `
         "flex": 1,
       },
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
       },
       Object {
         "backgroundColor": "black",

@@ -11,7 +11,6 @@ interface Palette {
 interface Typography {
     primaryFont: string | undefined;
     fontSize: {
-        header: number;
         small: number;
         normal: number;
         medium: number;

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
-import { pickBackroundPaletteColor } from '../../helpers';
+import { getThemeColor } from '../../helpers';
 import useTheme from '../ThemeProvider/useTheme';
 import { SimpleBackgroundColor } from '../../types';
 
@@ -45,9 +45,10 @@ export default function ({
                 {
                     width,
                     justifyContent,
-                    backgroundColor: pickBackroundPaletteColor(
-                        theme,
+                    backgroundColor: getThemeColor(
                         backgroundColor,
+                        theme.currentPalette,
+                        theme.currentPalette.primary,
                     ),
                     borderRadius,
                     alignSelf: align,

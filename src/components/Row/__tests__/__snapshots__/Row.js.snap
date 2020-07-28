@@ -10,7 +10,7 @@ exports[`Row component Should render 1`] = `
       },
       Object {
         "alignSelf": undefined,
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
         "borderRadius": undefined,
         "justifyContent": undefined,
         "width": undefined,
@@ -31,7 +31,7 @@ exports[`Row component Should render with childs 1`] = `
       },
       Object {
         "alignSelf": undefined,
-        "backgroundColor": "transparent",
+        "backgroundColor": "#ededed",
         "borderRadius": undefined,
         "justifyContent": undefined,
         "width": undefined,
@@ -57,7 +57,7 @@ exports[`Row component Should render with style 1`] = `
       },
       Object {
         "alignSelf": "center",
-        "backgroundColor": "blue",
+        "backgroundColor": undefined,
         "borderRadius": undefined,
         "justifyContent": undefined,
         "width": undefined,

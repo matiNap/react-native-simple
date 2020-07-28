@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { StyleSheet, View, ViewStyle, StyleProp } from 'react-native';
 import metrics from '../../theme/metrics';
 import useTheme from '../ThemeProvider/useTheme';
-import { pickBackroundPaletteColor } from '../../helpers';
+import { getThemeColor } from '../../helpers';
 import { SimpleBackgroundColor } from '../../types';
 
 interface Shadow {
@@ -63,7 +63,11 @@ export default ({
     const theme = useTheme();
     const { currentPalette } = theme;
     const backgroundColor = props.backgroundColor
-        ? pickBackroundPaletteColor(theme, props.backgroundColor)
+        ? getThemeColor(
+              props.backgroundColor,
+              theme.currentPalette,
+              theme.currentPalette.primary,
+          )
         : currentPalette.accent;
     const height = props.height ? props.height : DEFAULT_HEIGHT;
     const paddingTop = translucent ? metrics.statusBarHeight + 10 : 0;
