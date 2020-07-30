@@ -16,6 +16,10 @@ exports[`Theme provider Should override theme with hoc 1`] = `
         Object {
           "currentPalette": Object {
             "accent": "red",
+            "disabled": Object {
+              "primary": "#9BA1A5",
+              "secondary": "#c7c8c9",
+            },
             "primary": "#ededed",
             "secondary": "#bfbfbf",
             "text": Object {
@@ -25,6 +29,10 @@ exports[`Theme provider Should override theme with hoc 1`] = `
           },
           "palette": Object {
             "accent": "red",
+            "disabled": Object {
+              "primary": "#9BA1A5",
+              "secondary": "#c7c8c9",
+            },
             "primary": "#ededed",
             "secondary": "#bfbfbf",
             "text": Object {
@@ -34,11 +42,15 @@ exports[`Theme provider Should override theme with hoc 1`] = `
           },
           "paletteDark": Object {
             "accent": "#b626e2",
+            "disabled": Object {
+              "primary": "#9BA1A5",
+              "secondary": "#c7c8c9",
+            },
             "primary": "#494949",
             "secondary": "#727272",
             "text": Object {
               "primary": "#f2f2f2",
-              "secondary": "#333333",
+              "secondary": "#2f2f2f",
             },
           },
           "typography": Object {
@@ -67,6 +79,10 @@ exports[`Theme provider Should override theme with hook 1`] = `
     Object {
       "currentPalette": Object {
         "accent": "red",
+        "disabled": Object {
+          "primary": "#9BA1A5",
+          "secondary": "#c7c8c9",
+        },
         "primary": "#ededed",
         "secondary": "#bfbfbf",
         "text": Object {
@@ -76,6 +92,10 @@ exports[`Theme provider Should override theme with hook 1`] = `
       },
       "palette": Object {
         "accent": "red",
+        "disabled": Object {
+          "primary": "#9BA1A5",
+          "secondary": "#c7c8c9",
+        },
         "primary": "#ededed",
         "secondary": "#bfbfbf",
         "text": Object {
@@ -85,11 +105,15 @@ exports[`Theme provider Should override theme with hook 1`] = `
       },
       "paletteDark": Object {
         "accent": "#b626e2",
+        "disabled": Object {
+          "primary": "#9BA1A5",
+          "secondary": "#c7c8c9",
+        },
         "primary": "#494949",
         "secondary": "#727272",
         "text": Object {
           "primary": "#f2f2f2",
-          "secondary": "#333333",
+          "secondary": "#2f2f2f",
         },
       },
       "typography": Object {
