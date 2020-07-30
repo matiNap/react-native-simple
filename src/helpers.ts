@@ -2,7 +2,16 @@ import {
     SimpleBackgroundColor,
     SimpleTextColor,
     SimpleFontSize,
+    SimpleShadow,
 } from './types';
+import { DEFAULT_SHADOW } from './theme/defaultTheme';
+
+export const getShadow = (shadow: SimpleShadow) => {
+    if (shadow === null) return {};
+    else if (shadow && shadow === 'default') {
+        return DEFAULT_SHADOW;
+    } else return shadow;
+};
 
 export const getThemeColor = (
     value: SimpleBackgroundColor | SimpleTextColor,
