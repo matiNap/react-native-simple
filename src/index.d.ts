@@ -3,6 +3,7 @@ import Column from './components/Column';
 import Row from './components/Row';
 import Header from './components/Header';
 import Text from './components/Text';
+import Button from './components/Button';
 import ThemeProvider from './components/ThemeProvider';
 import useTheme from './components/ThemeProvider/useTheme';
 import withTheme from './components/ThemeProvider/withTheme';
@@ -18,4 +19,5 @@ export {
     Column,
     Header,
     Text,
+    Button,
 };

@@ -13,3 +13,46 @@ export type SimpleFontSize =
     | 'big'
     | number
     | undefined;
+interface Shadow {
+    shadowColor: string;
+    shadowOffset: {
+        width: number;
+        height: number;
+    };
+    shadowOpacity: number;
+    shadowRadius: number;
+    elevation: number;
+}
+
+export type SimpleShadow = 'default' | Shadow | null | undefined;
+
+export interface Palette {
+    primary: string;
+    secondary: string;
+    accent: string;
+    text: {
+        primary: string;
+        secondary: string;
+    };
+    disabled: {
+        primary: string;
+        secondary: string;
+    };
+}
+
+export interface Typography {
+    primaryFont: string | undefined;
+    fontSize: {
+        small: number;
+        normal: number;
+        medium: number;
+        big: number;
+    };
+}
+
+export interface ThemeType {
+    currentPalette: Palette;
+    palette: Palette;
+    paletteDark: Palette;
+    typography: Typography;
+}

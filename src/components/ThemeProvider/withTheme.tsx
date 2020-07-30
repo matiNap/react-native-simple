@@ -1,6 +1,6 @@
 import React from 'react';
 import useTheme from './useTheme';
-import ThemeType from './ThemeType';
+import { ThemeType } from '../../types';
 
 interface WithThemeProp {
     theme: ThemeType;

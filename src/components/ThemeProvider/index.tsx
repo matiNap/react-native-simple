@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import ThemeType from './ThemeType';
+import { ThemeType } from '../../types';
 import defaultTheme from '../../theme/defaultTheme';
 import _ from 'lodash';
 
