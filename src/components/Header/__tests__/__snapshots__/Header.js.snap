@@ -4,7 +4,7 @@ exports[`Header component Should render 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
       "flexDirection": "row",
@@ -21,7 +21,7 @@ exports[`Header component Should render child 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
       "flexDirection": "row",
@@ -42,7 +42,7 @@ exports[`Header component Should render fixed 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
       "elevation": 7,
@@ -70,7 +70,7 @@ exports[`Header component Should render multiple childs 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
       "flexDirection": "row",
@@ -94,7 +94,7 @@ exports[`Header component Should render rounded borders 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 20,
       "borderBottomRightRadius": 20,
       "flexDirection": "row",
@@ -128,7 +128,7 @@ exports[`Header component Should render with shadow 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
       "elevation": 7,
@@ -153,7 +153,7 @@ exports[`Header component Should render with style 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#b626e2",
+      "backgroundColor": "#bfbfbf",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
       "flexDirection": "row",
