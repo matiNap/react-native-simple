@@ -8,6 +8,7 @@ import ThemeProvider from './components/ThemeProvider';
 import useTheme from './components/ThemeProvider/useTheme';
 import withTheme from './components/ThemeProvider/withTheme';
 import { normalize as normalizeFont } from './helpers';
+import { SimpleTheme } from './types';
 
 export {
     Container,
@@ -20,4 +21,5 @@ export {
     Header,
     Text,
     Button,
+    SimpleTheme,
 };

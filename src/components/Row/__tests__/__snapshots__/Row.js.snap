@@ -3,20 +3,13 @@
 exports[`Row component Should render 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-      },
-      Object {
-        "alignSelf": undefined,
-        "backgroundColor": "#ededed",
-        "borderRadius": undefined,
-        "justifyContent": undefined,
-        "width": undefined,
-      },
-      undefined,
-    ]
+    Object {
+      "alignSelf": null,
+      "backgroundColor": null,
+      "flexDirection": "row",
+      "justifyContent": null,
+      "width": null,
+    }
   }
 />
 `;
@@ -24,20 +17,13 @@ exports[`Row component Should render 1`] = `
 exports[`Row component Should render with childs 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-      },
-      Object {
-        "alignSelf": undefined,
-        "backgroundColor": "#ededed",
-        "borderRadius": undefined,
-        "justifyContent": undefined,
-        "width": undefined,
-      },
-      undefined,
-    ]
+    Object {
+      "alignSelf": null,
+      "backgroundColor": null,
+      "flexDirection": "row",
+      "justifyContent": null,
+      "width": null,
+    }
   }
 >
   <View />
@@ -50,22 +36,13 @@ exports[`Row component Should render with childs 1`] = `
 exports[`Row component Should render with style 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-      },
-      Object {
-        "alignSelf": "center",
-        "backgroundColor": undefined,
-        "borderRadius": undefined,
-        "justifyContent": undefined,
-        "width": undefined,
-      },
-      Object {
-        "backgroundColor": "red",
-      },
-    ]
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "red",
+      "flexDirection": "row",
+      "justifyContent": null,
+      "width": null,
+    }
   }
 />
 `;

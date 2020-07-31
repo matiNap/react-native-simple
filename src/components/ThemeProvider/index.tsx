@@ -1,18 +1,18 @@
 import React, { ReactNode } from 'react';
-import { ThemeType } from '../../types';
+import { SimpleTheme } from '../../types';
 import defaultTheme from '../../theme/defaultTheme';
 import _ from 'lodash';
 
-export const ThemeContext = React.createContext<ThemeType>(defaultTheme);
+export const ThemeContext = React.createContext<any>(defaultTheme);
 
 interface Props {
-    theme: ThemeType;
+    theme: SimpleTheme;
     children: ReactNode;
     darkMode: undefined | boolean;
 }
 
 const createCurrentTheme = (
-    theme: ThemeType,
+    theme: SimpleTheme,
     darkMode: boolean | undefined,
 ) => {
     const currentPaletteKey = darkMode ? 'paletteDark' : 'palette';
