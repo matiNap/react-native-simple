@@ -3,21 +3,16 @@
 exports[`Header component Should render 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
-      },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 0,
+      "borderBottomRightRadius": 0,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 />
 `;
@@ -25,21 +20,16 @@ exports[`Header component Should render 1`] = `
 exports[`Header component Should render child 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
-      },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 0,
+      "borderBottomRightRadius": 0,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 >
   <Text>
@@ -51,32 +41,27 @@ exports[`Header component Should render child 1`] = `
 exports[`Header component Should render fixed 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 0,
+      "borderBottomRightRadius": 0,
+      "elevation": 7,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "left": 0,
+      "paddingTop": 0,
+      "position": "absolute",
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
       },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
-        "elevation": 7,
-        "height": 160.07999999999998,
-        "left": 0,
-        "paddingTop": 30,
-        "position": "absolute",
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.29,
-        "shadowRadius": 4.65,
-        "top": 0,
-      },
-      undefined,
-    ]
+      "shadowOpacity": 0.29,
+      "shadowRadius": 4.65,
+      "top": 0,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 />
 `;
@@ -84,21 +69,16 @@ exports[`Header component Should render fixed 1`] = `
 exports[`Header component Should render multiple childs 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
-      },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 0,
+      "borderBottomRightRadius": 0,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 >
   <Text>
@@ -113,21 +93,16 @@ exports[`Header component Should render multiple childs 1`] = `
 exports[`Header component Should render rounded borders 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
-      },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": 20,
-        "borderBottomRightRadius": 20,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 />
 `;
@@ -135,21 +110,16 @@ exports[`Header component Should render rounded borders 1`] = `
 exports[`Header component Should render with new backround color 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
-      },
-      Object {
-        "backgroundColor": "#313131",
-        "borderBottomLeftRadius": 20,
-        "borderBottomRightRadius": 20,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-      },
-      undefined,
-    ]
+    Object {
+      "backgroundColor": "#313131",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 />
 `;
@@ -157,29 +127,24 @@ exports[`Header component Should render with new backround color 1`] = `
 exports[`Header component Should render with shadow 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 0,
+      "borderBottomRightRadius": 0,
+      "elevation": 7,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
       },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
-        "elevation": 7,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-        "shadowColor": "#000",
-        "shadowOffset": Object {
-          "height": 3,
-          "width": 0,
-        },
-        "shadowOpacity": 0.29,
-        "shadowRadius": 4.65,
-      },
-      undefined,
-    ]
+      "shadowOpacity": 0.29,
+      "shadowRadius": 4.65,
+      "width": "100%",
+      "zIndex": 160,
+    }
   }
 />
 `;
@@ -187,23 +152,16 @@ exports[`Header component Should render with shadow 1`] = `
 exports[`Header component Should render with style 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-        "zIndex": 160,
-      },
-      Object {
-        "backgroundColor": "#b626e2",
-        "borderBottomLeftRadius": undefined,
-        "borderBottomRightRadius": undefined,
-        "height": 160.07999999999998,
-        "paddingTop": 30,
-      },
-      Object {
-        "width": "80%",
-      },
-    ]
+    Object {
+      "backgroundColor": "#bfbfbf",
+      "borderBottomLeftRadius": 0,
+      "borderBottomRightRadius": 0,
+      "flexDirection": "row",
+      "height": 160.07999999999998,
+      "paddingTop": 0,
+      "width": "80%",
+      "zIndex": 160,
+    }
   }
 />
 `;

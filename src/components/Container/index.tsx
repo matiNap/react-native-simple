@@ -1,28 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
-import { SimpleBackgroundColor } from '../../types';
-import { getThemeColor } from '../../helpers';
+import { StyleSheet, View } from 'react-native';
+
+import { getThemeColor, getProperty } from '../../helpers';
 import useTheme from '../ThemeProvider/useTheme';
+import Props from '../../types/Container';
 
-interface Props {
-    children?: React.ReactNode;
-    style?: StyleProp<ViewStyle>;
-    backgroundColor?: SimpleBackgroundColor;
-}
-
-export default function Container({ children, style, backgroundColor }: Props) {
+export default ({ children, style, backgroundColor }: Props) => {
     const theme = useTheme();
+    const { Container } = theme;
 
     return (
         <View
             style={[
+                getProperty([Container?.style]),
                 styles.container,
                 {
-                    backgroundColor: getThemeColor(
-                        backgroundColor,
-                        theme.currentPalette,
+                    backgroundColor: getProperty([
                         theme.currentPalette.primary,
-                    ),
+                        Container?.backgroundColor,
+                        getThemeColor(backgroundColor, theme.currentPalette),
+                    ]),
                 },
                 style,
             ]}
@@ -30,7 +27,7 @@ export default function Container({ children, style, backgroundColor }: Props) {
             {children}
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: { flex: 1 },

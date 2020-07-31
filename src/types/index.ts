@@ -1,3 +1,9 @@
+import RowProps from './Row';
+import SimpleTextProps from './Text';
+import HeaderProps from './Header';
+import ColumnProps from './Column';
+import ButtonProps from './Button';
+
 export type SimpleBackgroundColor =
     | string
     | 'primary'
@@ -55,4 +61,14 @@ export interface ThemeType {
     palette: Palette;
     paletteDark: Palette;
     typography: Typography;
+    Container?: RecursivePartial<RowProps>;
+    Row?: RecursivePartial<RowProps>;
+    Column?: RecursivePartial<ColumnProps>;
+    Text?: RecursivePartial<SimpleTextProps>;
+    Header?: RecursivePartial<HeaderProps>;
+    Button?: RecursivePartial<ButtonProps>;
 }
+
+export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+
+export type SimpleTheme = RecursivePartial<ThemeType> & { [key: string]: any };

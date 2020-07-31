@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import {
     StyleSheet,
     StyleProp,
@@ -9,22 +9,9 @@ import {
 import { RectButton } from 'react-native-gesture-handler';
 import useTheme from '../ThemeProvider/useTheme';
 import Text from '../Text';
-import { SimpleBackgroundColor, SimpleShadow, Palette } from '../../types';
-import { getThemeColor, getShadow } from '../../helpers';
-
-type VariantType = 'outlined' | 'filled' | 'empty';
-interface Props {
-    style?: StyleProp<ViewStyle>;
-    labelStyle: StyleProp<TextStyle>;
-    title?: string;
-    startIcon?: ReactNode;
-    endIcon?: ReactNode;
-    buttonColor?: SimpleBackgroundColor;
-    variant?: VariantType;
-    shadow?: SimpleShadow;
-    onPress?: () => void;
-    enabled?: boolean;
-}
+import { Palette } from '../../types';
+import { getThemeColor, getShadow, getProperty } from '../../helpers';
+import Props, { VariantType } from '../../types/Button';
 
 const getCurrentStyle = (
     variant: VariantType,
@@ -63,23 +50,24 @@ const getCurrentStyle = (
 };
 
 export default ({
-    style,
     title,
     startIcon,
     endIcon,
-    labelStyle,
-    variant = 'filled',
     enabled = true,
     onPress,
     ...props
 }: Props) => {
-    const { currentPalette } = useTheme();
-    const shadow = getShadow(props.shadow);
-    const buttonColor = getThemeColor(
-        props.buttonColor,
-        currentPalette,
+    const theme = useTheme();
+    const { currentPalette, Button } = theme;
+    const labelStyle = getProperty([Button?.labelStyle, props.labelStyle]);
+    const style = getProperty([Button?.style, props.style]);
+    const shadow = getProperty([Button?.shadow, getShadow(props.shadow)]);
+    const buttonColor = getProperty([
         currentPalette.accent,
-    );
+        Button?.buttonColor,
+        getThemeColor(props.buttonColor, currentPalette),
+    ]);
+    const variant = getProperty([Button?.variant, props.variant]);
     const { currentStyle, textStyle } = getCurrentStyle(
         variant,
         enabled,
@@ -87,8 +75,15 @@ export default ({
         currentPalette,
     );
     return (
-        <View style={[currentStyle, styles.container, shadow, style]}>
-            <RectButton style={styles.rectButton} {...{ onPress, enabled }}>
+        <View
+            style={StyleSheet.flatten([
+                currentStyle,
+                styles.container,
+                shadow,
+                style,
+            ])}
+        >
+            <RectButton style={[styles.rectButton]} {...{ onPress, enabled }}>
                 {startIcon}
                 {title && (
                     <Text style={StyleSheet.flatten([labelStyle, textStyle])}>
@@ -104,6 +99,7 @@ export default ({
 const styles = StyleSheet.create({
     container: {
         borderRadius: 8,
+        overflow: 'hidden',
     },
     rectButton: {
         padding: 10,
