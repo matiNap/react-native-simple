@@ -16,7 +16,7 @@ export default ({ children, style, backgroundColor }: Props) => {
                 styles.container,
                 {
                     backgroundColor: getProperty([
-                        theme.currentPalette.primary,
+                        theme.currentPalette.secondary,
                         Container?.backgroundColor,
                         getThemeColor(backgroundColor, theme.currentPalette),
                     ]),

@@ -4,6 +4,7 @@ import Row from './components/Row';
 import Header from './components/Header';
 import Text from './components/Text';
 import Button from './components/Button';
+import Input from './components/Input';
 import ThemeProvider from './components/ThemeProvider';
 import useTheme from './components/ThemeProvider/useTheme';
 import withTheme from './components/ThemeProvider/withTheme';
@@ -22,4 +23,5 @@ export {
     Text,
     Button,
     SimpleTheme,
+    Input,
 };
