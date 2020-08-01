@@ -6,7 +6,7 @@ export default interface Props {
     children: ReactNode[] | ReactNode;
     style?: StyleProp<ViewStyle>;
     backgroundColor?: SimpleBackgroundColor;
-    width?: string;
+    width?: string | number;
     justifyContent?:
         | 'space-between'
         | 'flex-start'

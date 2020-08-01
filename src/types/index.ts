@@ -3,6 +3,7 @@ import SimpleTextProps from './Text';
 import HeaderProps from './Header';
 import ColumnProps from './Column';
 import ButtonProps from './Button';
+import { InputProps } from './Input';
 
 export type SimpleBackgroundColor =
     | string
@@ -67,6 +68,7 @@ export interface ThemeType {
     Text?: RecursivePartial<SimpleTextProps>;
     Header?: RecursivePartial<HeaderProps>;
     Button?: RecursivePartial<ButtonProps>;
+    Input?: RecursivePartial<InputProps>;
 }
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };

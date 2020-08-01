@@ -4,6 +4,7 @@ exports[`Row component Should render 1`] = `
 <View
   style={
     Object {
+      "alignItems": "center",
       "alignSelf": null,
       "backgroundColor": null,
       "flexDirection": "row",
@@ -18,6 +19,7 @@ exports[`Row component Should render with childs 1`] = `
 <View
   style={
     Object {
+      "alignItems": "center",
       "alignSelf": null,
       "backgroundColor": null,
       "flexDirection": "row",
@@ -37,6 +39,7 @@ exports[`Row component Should render with style 1`] = `
 <View
   style={
     Object {
+      "alignItems": "center",
       "alignSelf": "center",
       "backgroundColor": "red",
       "flexDirection": "row",

@@ -11,7 +11,6 @@ const FIXED_STYLE = {
     top: 0,
     left: 0,
 };
-
 export default ({ children, ...props }: Props) => {
     const theme = useTheme();
     const { currentPalette, Header } = theme;
@@ -19,7 +18,7 @@ export default ({ children, ...props }: Props) => {
     const fixed = getProperty([Header?.fixed, props.fixed]);
     const style = getProperty([Header?.style, props.style]);
     const backgroundColor = getProperty([
-        currentPalette.secondary,
+        currentPalette.primary,
         Header?.backgroundColor,
         getThemeColor(props.backgroundColor, currentPalette),
     ]);
@@ -59,5 +58,7 @@ const styles = StyleSheet.create({
         width: '100%',
         zIndex: 160,
         flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
 });
