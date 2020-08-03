@@ -77,7 +77,7 @@ export default ({
             offsetY,
             translateY,
         };
-    }, []);
+    }, [currentOffset, height]);
 
     useCode(
         () =>
