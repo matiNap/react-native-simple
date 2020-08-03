@@ -1,11 +1,5 @@
-import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 import { TextInputProperties, StyleProp, ViewStyle } from 'react-native';
-import {
-    RecursivePartial,
-    SimpleShadow,
-    SimpleBackgroundColor,
-    SimpleTextColor,
-} from '.';
+import { SimpleShadow, SimpleBackgroundColor, SimpleTextColor } from '.';
 import { ReactNode } from 'react';
 
 export type InputVariant = 'filled' | 'outlined' | 'empty';
