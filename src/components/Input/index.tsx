@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import { InputProps, InputVariant } from '../../types/Input';
+import { InputProps } from '../../types/Input';
 import useTheme from '../ThemeProvider/useTheme';
 import { getProperty, getShadow, getThemeColor } from '../../helpers';
-import { Palette } from '../../types';
 
 const DEFAULT_BORDER_WIDTH = 2;
 
