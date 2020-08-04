@@ -9,7 +9,7 @@
         "reactnative"
     ],
     "description": "Simple components for React Native 📱",
-    "version": "0.0.0-development",
+    "version": "1.0.0",
     "scripts": {
         "tsc": "tsc --noEmit",
         "lint": "eslint .",
