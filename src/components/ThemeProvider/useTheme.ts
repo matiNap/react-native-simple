@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { ThemeContext } from './index';
-import ThemeType from './ThemeType';
+import { ThemeType } from '../../types';
 
-export default (): ThemeType => {
-    const theme = useContext(ThemeContext);
+export default <T>(): T & ThemeType => {
+    const theme = useContext<ThemeType & T>(ThemeContext);
 
     return theme;
 };

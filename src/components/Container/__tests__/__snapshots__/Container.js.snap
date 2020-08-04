@@ -4,11 +4,12 @@ exports[`Container component Should render 1`] = `
 <View
   style={
     Array [
+      null,
       Object {
         "flex": 1,
       },
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#FBF5F3",
       },
       undefined,
     ]
@@ -20,11 +21,12 @@ exports[`Container component Should render with child 1`] = `
 <View
   style={
     Array [
+      null,
       Object {
         "flex": 1,
       },
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#FBF5F3",
       },
       undefined,
     ]
@@ -40,11 +42,12 @@ exports[`Container component Should render with style 1`] = `
 <View
   style={
     Array [
+      null,
       Object {
         "flex": 1,
       },
       Object {
-        "backgroundColor": "transparent",
+        "backgroundColor": "#FBF5F3",
       },
       Object {
         "backgroundColor": "black",

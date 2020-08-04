@@ -1,59 +1,39 @@
-import React, { ReactNode } from 'react';
-import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
-import { pickBackroundPaletteColor } from '../../helpers';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { getThemeColor, getProperty } from '../../helpers';
 import useTheme from '../ThemeProvider/useTheme';
-import { SimpleBackgroundColor } from '../../types';
-
-interface Props {
-    children: ReactNode[] | ReactNode;
-    style?: StyleProp<ViewStyle>;
-    borderRadius?: number;
-    backgroundColor?: SimpleBackgroundColor;
-    width?: string;
-    justifyContent?:
-        | 'space-between'
-        | 'flex-start'
-        | 'flex-end'
-        | 'center'
-        | 'space-around'
-        | 'space-evenly'
-        | undefined;
-    align?:
-        | 'flex-start'
-        | 'flex-end'
-        | 'center'
-        | 'auto'
-        | 'stretch'
-        | 'baseline'
-        | undefined;
-}
+import Props from '../../types/Row';
 
 export default function ({
     children,
     style,
-    borderRadius,
     backgroundColor,
     width,
     justifyContent,
     align,
 }: Props) {
     const theme = useTheme();
+    const { Row } = theme;
     return (
         <View
-            style={[
+            style={StyleSheet.flatten([
+                getProperty([Row?.style]),
                 styles.container,
                 {
-                    width,
-                    justifyContent,
-                    backgroundColor: pickBackroundPaletteColor(
-                        theme,
-                        backgroundColor,
+                    width: getProperty([Row?.width, width]),
+                    justifyContent: getProperty([
+                        Row?.justifyContent,
+                        justifyContent,
+                    ]),
+                    backgroundColor: getThemeColor(
+                        getProperty([Row?.backgroundColor, backgroundColor]),
+                        theme.currentPalette,
                     ),
-                    borderRadius,
-                    alignSelf: align,
+
+                    alignSelf: getProperty([Row?.align, align]),
                 },
                 style,
-            ]}
+            ])}
         >
             {children}
         </View>
@@ -64,5 +44,6 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         flexDirection: 'row',
+        alignItems: 'center',
     },
 });

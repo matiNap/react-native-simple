@@ -16,38 +16,49 @@ exports[`Theme provider Should override theme with hoc 1`] = `
         Object {
           "currentPalette": Object {
             "accent": "red",
+            "disabled": Object {
+              "primary": "#9BA1A5",
+              "secondary": "#c7c8c9",
+            },
             "primary": "#ededed",
-            "secondary": "#bfbfbf",
+            "secondary": "#FBF5F3",
             "text": Object {
               "primary": "#333333",
               "secondary": "#f2f2f2",
             },
           },
           "palette": Object {
-            "accent": "#b626e2",
-            "primary": "#ededed",
-            "secondary": "#bfbfbf",
+            "accent": "red",
+            "disabled": Object {
+              "primary": "#9BA1A5",
+              "secondary": "#c7c8c9",
+            },
+            "primary": "#FCEFF9",
+            "secondary": "#FBF5F3 ",
             "text": Object {
               "primary": "#333333",
               "secondary": "#f2f2f2",
             },
           },
           "paletteDark": Object {
-            "accent": "#b626e2",
+            "accent": "#08d31c",
+            "disabled": Object {
+              "primary": "#9BA1A5",
+              "secondary": "#c7c8c9",
+            },
             "primary": "#494949",
             "secondary": "#727272",
             "text": Object {
               "primary": "#f2f2f2",
-              "secondary": "#333333",
+              "secondary": "#2f2f2f",
             },
           },
           "typography": Object {
             "fontSize": Object {
-              "big": 43,
-              "header": 50,
-              "medium": 45,
-              "normal": 36,
-              "small": 27,
+              "big": 27,
+              "medium": 25,
+              "normal": 20,
+              "small": 15,
             },
             "primaryFont": undefined,
           },
@@ -68,38 +79,49 @@ exports[`Theme provider Should override theme with hook 1`] = `
     Object {
       "currentPalette": Object {
         "accent": "red",
+        "disabled": Object {
+          "primary": "#9BA1A5",
+          "secondary": "#c7c8c9",
+        },
         "primary": "#ededed",
-        "secondary": "#bfbfbf",
+        "secondary": "#FBF5F3",
         "text": Object {
           "primary": "#333333",
           "secondary": "#f2f2f2",
         },
       },
       "palette": Object {
-        "accent": "#b626e2",
-        "primary": "#ededed",
-        "secondary": "#bfbfbf",
+        "accent": "red",
+        "disabled": Object {
+          "primary": "#9BA1A5",
+          "secondary": "#c7c8c9",
+        },
+        "primary": "#FCEFF9",
+        "secondary": "#FBF5F3 ",
         "text": Object {
           "primary": "#333333",
           "secondary": "#f2f2f2",
         },
       },
       "paletteDark": Object {
-        "accent": "#b626e2",
+        "accent": "#08d31c",
+        "disabled": Object {
+          "primary": "#9BA1A5",
+          "secondary": "#c7c8c9",
+        },
         "primary": "#494949",
         "secondary": "#727272",
         "text": Object {
           "primary": "#f2f2f2",
-          "secondary": "#333333",
+          "secondary": "#2f2f2f",
         },
       },
       "typography": Object {
         "fontSize": Object {
-          "big": 43,
-          "header": 50,
-          "medium": 45,
-          "normal": 36,
-          "small": 27,
+          "big": 27,
+          "medium": 25,
+          "normal": 20,
+          "small": 15,
         },
         "primaryFont": undefined,
       },

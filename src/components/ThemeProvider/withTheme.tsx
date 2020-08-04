@@ -1,9 +1,9 @@
 import React from 'react';
 import useTheme from './useTheme';
-import ThemeType from './ThemeType';
+import { SimpleTheme } from '../../types';
 
 interface WithThemeProp {
-    theme: ThemeType;
+    theme: SimpleTheme;
 }
 
 export default <P extends Record<string, unknown>>(

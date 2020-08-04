@@ -8,12 +8,12 @@ exports[`Column component Should render 1`] = `
         "flexDirection": "column",
       },
       Object {
-        "alignSelf": undefined,
-        "backgroundColor": "transparent",
-        "height": undefined,
-        "justifyContent": undefined,
+        "alignSelf": null,
+        "backgroundColor": null,
+        "height": null,
+        "justifyContent": null,
       },
-      undefined,
+      null,
     ]
   }
 />
@@ -27,12 +27,12 @@ exports[`Column component Should render with childs 1`] = `
         "flexDirection": "column",
       },
       Object {
-        "alignSelf": undefined,
-        "backgroundColor": "transparent",
-        "height": undefined,
-        "justifyContent": undefined,
+        "alignSelf": null,
+        "backgroundColor": null,
+        "height": null,
+        "justifyContent": null,
       },
-      undefined,
+      null,
     ]
   }
 >
@@ -52,9 +52,9 @@ exports[`Column component Should render with style 1`] = `
       },
       Object {
         "alignSelf": "center",
-        "backgroundColor": "blue",
-        "height": undefined,
-        "justifyContent": undefined,
+        "backgroundColor": null,
+        "height": null,
+        "justifyContent": null,
       },
       Object {
         "backgroundColor": "red",

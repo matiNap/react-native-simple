@@ -1,41 +1,22 @@
-import React, { ReactNode } from 'react';
-import { StyleSheet, View, StyleProp, ViewStyle } from 'react-native';
-import { pickBackroundPaletteColor } from '../../helpers';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { getThemeColor, getProperty } from '../../helpers';
 import useTheme from '../ThemeProvider/useTheme';
+import Props from '../../types/Column';
 
-interface Props {
-    children: ReactNode[] | ReactNode;
-    style?: StyleProp<ViewStyle>;
-    borderRadius?: number;
-    backgroundColor?: string;
-    height?: string;
-    justifyContent?:
-        | 'space-between'
-        | 'flex-start'
-        | 'flex-end'
-        | 'center'
-        | 'space-around'
-        | 'space-evenly'
-        | undefined;
-    align?:
-        | 'flex-start'
-        | 'flex-end'
-        | 'center'
-        | 'auto'
-        | 'stretch'
-        | 'baseline'
-        | undefined;
-}
-
-export default function ({
-    justifyContent,
-    height,
-    backgroundColor,
-    style,
-    children,
-    align,
-}: Props) {
-    const theme = useTheme();
+export default function ({ children, ...props }: Props) {
+    const { Column, currentPalette } = useTheme();
+    const backgroundColor = getProperty([
+        Column?.backgroundColor,
+        getThemeColor(props.backgroundColor, currentPalette),
+    ]);
+    const align = getProperty([Column?.align, props.align]);
+    const justifyContent = getProperty([
+        Column?.justifyContent,
+        props.justifyContent,
+    ]);
+    const height = getProperty([Column?.height, props.height]);
+    const style = getProperty([Column?.style, props.style]);
     return (
         <View
             style={[
@@ -43,10 +24,7 @@ export default function ({
                 {
                     justifyContent,
                     height,
-                    backgroundColor: pickBackroundPaletteColor(
-                        theme,
-                        backgroundColor,
-                    ),
+                    backgroundColor,
                     alignSelf: align,
                 },
                 style,
