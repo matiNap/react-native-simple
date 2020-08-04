@@ -21,7 +21,7 @@ exports[`Theme provider Should override theme with hoc 1`] = `
               "secondary": "#c7c8c9",
             },
             "primary": "#ededed",
-            "secondary": "#bfbfbf",
+            "secondary": "#FBF5F3",
             "text": Object {
               "primary": "#333333",
               "secondary": "#f2f2f2",
@@ -33,15 +33,15 @@ exports[`Theme provider Should override theme with hoc 1`] = `
               "primary": "#9BA1A5",
               "secondary": "#c7c8c9",
             },
-            "primary": "#ededed",
-            "secondary": "#bfbfbf",
+            "primary": "#FCEFF9",
+            "secondary": "#FBF5F3 ",
             "text": Object {
               "primary": "#333333",
               "secondary": "#f2f2f2",
             },
           },
           "paletteDark": Object {
-            "accent": "#b626e2",
+            "accent": "#08d31c",
             "disabled": Object {
               "primary": "#9BA1A5",
               "secondary": "#c7c8c9",
@@ -84,7 +84,7 @@ exports[`Theme provider Should override theme with hook 1`] = `
           "secondary": "#c7c8c9",
         },
         "primary": "#ededed",
-        "secondary": "#bfbfbf",
+        "secondary": "#FBF5F3",
         "text": Object {
           "primary": "#333333",
           "secondary": "#f2f2f2",
@@ -96,15 +96,15 @@ exports[`Theme provider Should override theme with hook 1`] = `
           "primary": "#9BA1A5",
           "secondary": "#c7c8c9",
         },
-        "primary": "#ededed",
-        "secondary": "#bfbfbf",
+        "primary": "#FCEFF9",
+        "secondary": "#FBF5F3 ",
         "text": Object {
           "primary": "#333333",
           "secondary": "#f2f2f2",
         },
       },
       "paletteDark": Object {
-        "accent": "#b626e2",
+        "accent": "#08d31c",
         "disabled": Object {
           "primary": "#9BA1A5",
           "secondary": "#c7c8c9",

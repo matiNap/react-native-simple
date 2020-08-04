@@ -58,8 +58,17 @@ export default ({
     ...props
 }: Props) => {
     const theme = useTheme();
-    const { currentPalette, Button } = theme;
-    const labelStyle = getProperty([Button?.labelStyle, props.labelStyle]);
+    const { currentPalette, Button, palette } = theme;
+    const labelStyle = getProperty([
+        {
+            color:
+                props.variant === 'filled'
+                    ? palette.text.secondary
+                    : currentPalette.text.primary,
+        },
+        Button?.labelStyle,
+        props.labelStyle,
+    ]);
     const style = getProperty([Button?.style, props.style]);
     const shadow = getProperty([Button?.shadow, getShadow(props.shadow)]);
     const buttonColor = getProperty([
@@ -86,7 +95,7 @@ export default ({
             <RectButton style={[styles.rectButton]} {...{ onPress, enabled }}>
                 {startIcon}
                 {title && (
-                    <Text style={StyleSheet.flatten([labelStyle, textStyle])}>
+                    <Text style={StyleSheet.flatten([textStyle, labelStyle])}>
                         {title}
                     </Text>
                 )}
@@ -105,5 +114,6 @@ const styles = StyleSheet.create({
         padding: 10,
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-around',
     },
 });

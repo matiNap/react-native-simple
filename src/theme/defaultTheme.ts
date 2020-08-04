@@ -12,8 +12,8 @@ export const DEFAULT_SHADOW = {
 export default {
     currentPalette: {
         primary: '#ededed',
-        secondary: '#bfbfbf',
-        accent: '#b626e2',
+        secondary: '#FBF5F3',
+        accent: '#08d31c',
         text: {
             primary: '#333333',
             secondary: '#f2f2f2',
@@ -24,9 +24,9 @@ export default {
         },
     },
     palette: {
-        primary: '#ededed',
-        secondary: '#bfbfbf',
-        accent: '#b626e2',
+        primary: '#FCEFF9',
+        secondary: '#FBF5F3 ',
+        accent: '#08d31c',
         text: {
             primary: '#333333',
             secondary: '#f2f2f2',
@@ -39,7 +39,7 @@ export default {
     paletteDark: {
         primary: '#494949',
         secondary: '#727272',
-        accent: '#b626e2',
+        accent: '#08d31c',
         text: {
             secondary: '#2f2f2f',
             primary: '#f2f2f2',
