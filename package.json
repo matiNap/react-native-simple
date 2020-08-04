@@ -64,6 +64,7 @@
         "typescript": "~3.8.3"
     },
     "dependencies": {
+        "react-native-gesture-handler": "^1.7.0",
         "react-native-reanimated": "^1.10.1",
         "react-native-redash": "^14.2.3"
     },
