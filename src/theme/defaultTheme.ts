@@ -1,32 +1,61 @@
-import { normalize } from '../helpers';
+export const DEFAULT_SHADOW = {
+    shadowColor: '#000',
+    shadowOffset: {
+        width: 0,
+        height: 3,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+    elevation: 7,
+};
 
 export default {
-    palette: {
+    currentPalette: {
         primary: '#ededed',
-        secondary: '#bfbfbf',
-        accent: '#b626e2',
+        secondary: '#FBF5F3',
+        accent: '#08d31c',
         text: {
             primary: '#333333',
             secondary: '#f2f2f2',
+        },
+        disabled: {
+            secondary: '#c7c8c9',
+            primary: '#9BA1A5',
+        },
+    },
+    palette: {
+        primary: '#FCEFF9',
+        secondary: '#FBF5F3 ',
+        accent: '#08d31c',
+        text: {
+            primary: '#333333',
+            secondary: '#f2f2f2',
+        },
+        disabled: {
+            secondary: '#c7c8c9',
+            primary: '#9BA1A5',
         },
     },
     paletteDark: {
         primary: '#494949',
         secondary: '#727272',
-        accent: '#b626e2',
+        accent: '#08d31c',
         text: {
-            secondary: '#333333',
+            secondary: '#2f2f2f',
             primary: '#f2f2f2',
+        },
+        disabled: {
+            secondary: '#c7c8c9',
+            primary: '#9BA1A5',
         },
     },
     typography: {
         primaryFont: undefined,
         fontSize: {
-            small: normalize(15),
-            normal: normalize(20),
-            medium: normalize(25),
-            big: normalize(24),
-            header: normalize(28),
+            small: 15,
+            normal: 20,
+            medium: 25,
+            big: 27,
         },
     },
 };

@@ -1,17 +1,33 @@
 import React, { ReactNode } from 'react';
-import ThemeType from './ThemeType';
+import { SimpleTheme } from '../../types';
 import defaultTheme from '../../theme/defaultTheme';
+import _ from 'lodash';
 
-export const ThemeContext = React.createContext<ThemeType>(defaultTheme);
+export const ThemeContext = React.createContext<any>(defaultTheme);
 
 interface Props {
-    theme: ThemeType;
+    theme: SimpleTheme;
     children: ReactNode;
+    darkMode: undefined | boolean;
 }
 
-export default ({ theme, children }: Props) => {
+const createCurrentTheme = (
+    theme: SimpleTheme,
+    darkMode: boolean | undefined,
+) => {
+    const currentPaletteKey = darkMode ? 'paletteDark' : 'palette';
+    const currentPalette = theme[currentPaletteKey]
+        ? theme[currentPaletteKey]
+        : defaultTheme[currentPaletteKey];
+
+    return _.merge(defaultTheme, { ...theme, currentPalette });
+};
+
+export default ({ theme, children, darkMode }: Props) => {
+    const currentTheme = createCurrentTheme(theme, darkMode);
+
     return (
-        <ThemeContext.Provider value={{ ...defaultTheme, ...theme }}>
+        <ThemeContext.Provider value={currentTheme}>
             {children}
         </ThemeContext.Provider>
     );
