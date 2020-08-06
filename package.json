@@ -9,13 +9,14 @@
         "reactnative"
     ],
     "description": "Simple components for React Native 📱",
-    "version": "0.0.0-development",
+    "version": "1.0.0",
     "scripts": {
         "tsc": "tsc --noEmit",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "test": "jest",
         "test:watch": "jest --watch",
+        "test:update": "jest -u",
         "semantic-release": "semantic-release"
     },
     "repository": {
@@ -59,6 +60,7 @@
         "react-native-gesture-handler": "^1.7.0",
         "react-native-reanimated": "^1.9.0",
         "react-native-redash": "^14.2.3",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
         "react-native-testing-library": "2.1.0",
         "react-test-renderer": "16.13.1",
         "semantic-release": "^17.1.1",

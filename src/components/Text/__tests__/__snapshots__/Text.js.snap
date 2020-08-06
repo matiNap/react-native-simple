@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component Should render 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#333333",
+      "fontFamily": undefined,
+      "fontSize": null,
+    }
+  }
+>
+  text
+</Text>
+`;
+
+exports[`Text component Should render text color 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#333333",
+      "fontFamily": undefined,
+      "fontSize": null,
+    }
+  }
+>
+  text
+</Text>
+`;
+
+exports[`Text component Should render text fontSize 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#333333",
+      "fontFamily": undefined,
+      "fontSize": 25,
+    }
+  }
+>
+  text
+</Text>
+`;
+
+exports[`Text component Should render with style 1`] = `
+<Text
+  style={
+    Object {
+      "backgroundColor": "blue",
+      "color": "#333333",
+      "fontFamily": undefined,
+      "fontSize": null,
+    }
+  }
+>
+  text
+</Text>
+`;
