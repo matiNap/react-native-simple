@@ -4,42 +4,53 @@
 #
 version: 2
 jobs:
-    build:
-        docker:
-            # specify the version you desire here
-            - image: circleci/node:10.18.1
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:10.18.1
 
-            # Specify service dependencies here if necessary
-            # CircleCI maintains a library of pre-built images
-            # documented at https://circleci.com/docs/2.0/circleci-images/
-            # - image: circleci/mongo:3.4.4
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
 
-        working_directory: ~/repo
+    working_directory: ~/repo
 
-        steps:
-            - checkout
+    steps:
+      - checkout
 
-            # Download and cache dependencies
-            - restore_cache:
-                  keys:
-                      - v1-dependencies-{{ checksum "package.json" }}
-                      # fallback to using the latest cache if no exact match is found
-                      - v1-dependencies-
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
-            - run: npm i
+      - run: npm i
 
-            - save_cache:
-                  paths:
-                      - node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
-            # run eslint, typescript and jest
-            - run: npm run lint && npm run tsc && npm test
+      # run eslint, typescript and jest
+      - run: npm run lint && npm run tsc && npm test
 
-            #Upload to npm
-            - deploy:
-                  name: Node deployment
-                  command: |
-                      if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                          npm run semantic-release
-                      fi
+      #Deploy docs
+      - run:
+          name: Deploy GithubPageps
+          command: |
+            if ["${CIRCLE_BRANCH}" == "website"]; then
+                git config --global user.email "matiNap@users.noreply.github.com"
+                git config --global user.name "matiNap"
+                echo "machine github.com login matiNap password $GITHUB_TOKEN" > ~/.netrc
+                cd website && npm install && GIT_USER="matiNap" npm run publish-gh-pages
+            fi
+
+      #Upload to npm
+      - deploy:
+          name: Node deployment
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                npm run semantic-release
+            fi
