@@ -43,7 +43,7 @@ jobs:
                       if [ "${CIRCLE_BRANCH}" == "master" ]; then
                           npm run semantic-release
                       fi
-            - build-docs:
+            - docs:
                    name: Docs deplyment
                    command: | 
                           if ["${CIRCLE_BRANCH}" == "website"]; then
