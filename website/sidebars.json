@@ -1,0 +1,17 @@
+{
+    "docs": {
+        "Basics": ["getting-started", "customization"],
+        "Components": [
+            "container",
+            "row",
+            "column",
+            "text",
+            "input",
+            "button",
+            "header",
+            "sortable-list",
+            "list-item"
+        ],
+        "Examples": ["doc3"]
+    }
+}

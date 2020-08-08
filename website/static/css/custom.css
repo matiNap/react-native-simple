@@ -1,0 +1,9 @@
+body {
+    font-family: 'Noto Sans JP', 'Times New Roman', Times, serif !important;
+}
+
+.main-button {
+    font-size: 21px;
+    text-transform: none !important;
+    font-weight: bold;
+}
