@@ -4,6 +4,15 @@
 #
 version: 2
 jobs:
+    docs:
+        name: Docs deplyment
+        command: | 
+            if ["${CIRCLE_BRANCH}" == "website"]; then
+                git config --global user.email "matiNap@users.noreply.github.com"
+                git config --global user.name "matiNap"
+                echo "machine github.com login matiNap password $GITHUB_TOKEN" > ~/.netrc
+                cd website && yarn install && GIT_USER="matiNap" yarn run publish-gh-pages
+            fi
     build:
         docker:
             # specify the version you desire here
@@ -43,13 +52,4 @@ jobs:
                       if [ "${CIRCLE_BRANCH}" == "master" ]; then
                           npm run semantic-release
                       fi
-            - docs:
-                   name: Docs deplyment
-                   command: | 
-                          if ["${CIRCLE_BRANCH}" == "website"]; then
-                              git config --global user.email "matiNap@users.noreply.github.com"
-                              git config --global user.name "matiNap"
-                              echo "machine github.com login matiNap password $GITHUB_TOKEN" > ~/.netrc
-                              cd website && yarn install && GIT_USER="matiNap" yarn run publish-gh-pages
-                          fi
                 
