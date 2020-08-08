@@ -10,33 +10,32 @@ Header is navigation component that display information and actions of the curre
 
 ![Header](assets/component-header.jpg)
 
-```
+```js
 import React from 'react';
 import { Text, Container, Header, Row } from 'react-native-simple';
 import { StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export default () => {
-  return (
-    <Container>
-      <Header>
-        <Row>
-          <Feather name="menu" style={styles.icon} />
-          <Text fontSize="medium">Title</Text>
-        </Row>
-        <Feather name="home" style={styles.icon} />
-      </Header>
-    </Container>
-  );
+    return (
+        <Container>
+            <Header>
+                <Row>
+                    <Feather name="menu" style={styles.icon} />
+                    <Text fontSize="medium">Title</Text>
+                </Row>
+                <Feather name="home" style={styles.icon} />
+            </Header>
+        </Container>
+    );
 };
 
 const styles = StyleSheet.create({
-  icon: {
-    fontSize: 32,
-    color: '#2f2f2f',
-  },
+    icon: {
+        fontSize: 32,
+        color: '#2f2f2f',
+    },
 });
-
 ```
 
 ## Props
@@ -45,17 +44,17 @@ const styles = StyleSheet.create({
 
 Background color that can be selecte from theme by name or pass color as string
 
-| Type                                        | Default     |
-| ------------------------------------------- | ----------- |
-| [`SimpleBackgroundColor`](customization.md) | `"primary"` |
+| Type                                                              | Default     |
+| ----------------------------------------------------------------- | ----------- |
+| [`SimpleBackgroundColor`](customization.md#simplebackgroundcolor) | `"primary"` |
 
 ### `shadow`
 
 Shadow of the header
 
-| Type                               | Default     |
-| ---------------------------------- | ----------- |
-| [`SimpleShadow`](customization.md) | `"primary"` |
+| Type                                            | Default     |
+| ----------------------------------------------- | ----------- |
+| [`SimpleShadow`](customization.md#simpleshadow) | `"primary"` |
 
 ### `fixed`
 

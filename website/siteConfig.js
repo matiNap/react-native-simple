@@ -19,7 +19,7 @@ const siteConfig = {
 
     highlight: {
         theme: 'agate',
-        defaultLang: 'typescript',
+        defaultLang: 'javascript',
     },
     colors: {
         primaryColor: '#1cc613',

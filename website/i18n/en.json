@@ -45,6 +45,10 @@
         "title": "Header",
         "sidebar_label": "Header"
       },
+      "input": {
+        "title": "Input",
+        "sidebar_label": "Input"
+      },
       "list-item": {
         "title": "ListItem",
         "sidebar_label": "ListItem"

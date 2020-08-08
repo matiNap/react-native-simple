@@ -10,69 +10,63 @@ SortableList allow changing order in list
 
 ![Header](assets/component-sortable-list.gif)
 
-```
+```js
 import React from 'react';
-import {
-  Container,
-  SortableList,
-  Row,
-  Text,
-} from 'react-native-simple';
+import { Container, SortableList, Row, Text } from 'react-native-simple';
 import { StyleSheet } from 'react-native';
 
 const DATA = [
-  {
-    id: '1',
-    content: 'item1',
-  },
-  {
-    id: '2',
-    content: 'item2',
-  },
-  {
-    id: '3',
-    content: 'item3',
-  },
-  {
-    id: '4',
-    content: 'item4',
-  },
+    {
+        id: '1',
+        content: 'item1',
+    },
+    {
+        id: '2',
+        content: 'item2',
+    },
+    {
+        id: '3',
+        content: 'item3',
+    },
+    {
+        id: '4',
+        content: 'item4',
+    },
 ];
 const ITEM_HEIGHT = 60;
 
 export default () => {
-  return (
-    <Container>
-      <SortableList
-        style={styles.listContainer}
-        itemHeight={ITEM_HEIGHT}
-        onReorder={(draggedIndex, switchedWithIndex) => {}}
-      >
-        {DATA.map(({ content, id }) => (
-          <Row justifyContent="center" key={id} style={styles.card}>
-            <Text>{content}</Text>
-          </Row>
-        ))}
-      </SortableList>
-    </Container>
-  );
+    return (
+        <Container>
+            <SortableList
+                style={styles.listContainer}
+                itemHeight={ITEM_HEIGHT}
+                onReorder={(draggedIndex, switchedWithIndex) => {}}
+            >
+                {DATA.map(({ content, id }) => (
+                    <Row justifyContent="center" key={id} style={styles.card}>
+                        <Text>{content}</Text>
+                    </Row>
+                ))}
+            </SortableList>
+        </Container>
+    );
 };
 
 const styles = StyleSheet.create({
-  listContainer: {
-    marginTop: 30,
-    height: '100%',
-  },
-  card: {
-    borderTopWidth: 1,
-    borderColor: 'rgba(0, 0, 0, 0.3)',
-    borderBottomWidth: 1,
-    backgroundColor: 'white',
+    listContainer: {
+        marginTop: 30,
+        height: '100%',
+    },
+    card: {
+        borderTopWidth: 1,
+        borderColor: 'rgba(0, 0, 0, 0.3)',
+        borderBottomWidth: 1,
+        backgroundColor: 'white',
 
-    height: ITEM_HEIGHT,
-  },
+        height: ITEM_HEIGHT,
+    },
 });
-
 ```
 
 ## Props

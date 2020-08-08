@@ -11,36 +11,35 @@ sidebar_label: Customization
 Here are stored colors for current theme. In `<ThemeProvider/>` we can select if we want use light theme or dark theme.
 If we check [`darkMode`](#dark-mode) to `true` we can access in `currentPalette` colors from dark theme
 
-```
+```tsx
 import { useTheme, Text } from 'react-native-simple';
 
 const ThemeComponent = () => {
-  const { currentPalette } = useTheme();
+    const { currentPalette } = useTheme();
 
-  return (
-    <View style={{ backgroundColor: currentPalette.primary }}>
-      <Text style={{ color: currentPalette.text.primary }}></Text>
-    </View>
-  );
+    return (
+        <View style={{ backgroundColor: currentPalette.primary }}>
+            <Text style={{ color: currentPalette.text.primary }}></Text>
+        </View>
+    );
 };
-
 ```
 
 ### Palette
 
 We can specify colors for light mode and dark mode
 
-```
+```tsx
 const theme = {
-  //Palette for light theme
-  palette: {
-    //... colors
-  },
+    //Palette for light theme
+    palette: {
+        //... colors
+    },
 
-  //Palette for dark theme
-  paletteDark: {
-    //... colors
-  },
+    //Palette for dark theme
+    paletteDark: {
+        //... colors
+    },
 };
 ```
 
@@ -48,9 +47,9 @@ Check field for palette in [`defaultTheme`](#override-current-theme)
 
 ### Typography
 
-```
+```tsx
 const defaultTheme = {
-     typography: {
+    typography: {
         primaryFont: 'rubik',
         fontSize: {
             small: 15,
@@ -58,23 +57,22 @@ const defaultTheme = {
             medium: 25,
             big: 30,
         },
-    }
-}
+    },
+};
 ```
 
 ### Dark Mode
 
-```
+```tsx
 import { ThemeProvider } from 'react-native-simple';
 
 export default () => {
- return (
-   <ThemeProvider darkMode={true}>
-     <AppContainer />
-   </ThemeProvider>
- );
+    return (
+        <ThemeProvider darkMode={true}>
+            <AppContainer />
+        </ThemeProvider>
+    );
 };
-
 ```
 
 ## Get theme fields
@@ -83,26 +81,21 @@ export default () => {
 
 Hook for theme
 
-```
+```tsx
 import { useTheme } from 'react-native-simple';
 
 const ThemeComponent = () => {
-  const theme = useTheme();
+    const theme = useTheme();
 
-  return (
-   <View>
-     ...
-   </View>
-  );
+    return <View>...</View>;
 };
-
 ```
 
 ### withTheme()
 
 Higher order component for theme
 
-```
+```tsx
 import React from 'react';
 import {withTheme} from 'react-native-simple'
 import { View } from 'react-native';
@@ -123,12 +116,26 @@ export defaultTheme withTheme(ThemeComponent);
 
 ## Configure theme
 
-### Override current theme
-
 Override default theme
 
+```tsx
+import { ThemeProvider } from 'react-native-simple';
+import myTheme from './myTheme';
+
+export default () => {
+    return (
+        <ThemeProvider theme={myTheme}>
+            <App />
+        </ThemeProvider>
+    );
+};
 ```
- const defaultTheme = {
+
+We can override current field add custom fields
+
+```ts
+//myTheme.ts
+export default myTheme = {
     currentPalette: {
         primary: '#ededed',
         secondary: '#fbf5f3',
@@ -177,77 +184,84 @@ Override default theme
             big: 27,
         },
     },
+    myField: {
+        myColor: '#313131',
+    },
 };
 ```
 
-### Add custom theme variables
+```tsx
+//App.tsx
+import React from 'react';
+import { Container, useTheme } from 'react-native-simple';
 
-```
-const theme = {
-    ...defaultThemeFields,
-    specialFields:{
-        specialColor:"#313131",
-        specialFontSize:11
-    }
-}
+export default () => {
+    const { myColor, currentPalette } = useTheme();
+    return <Container backgroundColor={myColor}></Container>;
+};
 ```
 
 ## Theme types
 
 Theme types allow users to set text colors, backround colors, border colors or font size using configuration file
 
-```
+```tsx
 import { ThemeProvider, Header, Text } from 'react-native-simple';
 
 const theme = {
-  palette: {
-    myColor: '#313131',
-    text: {
-      myTextColor: '#2f2f2f',
+    palette: {
+        myColor: '#313131',
+        text: {
+            myTextColor: '#2f2f2f',
+        },
     },
-  },
-  typography: {
-    fontSize: {
-      myFontSize: 34,
+    typography: {
+        fontSize: {
+            myFontSize: 34,
+        },
     },
-  },
 };
 
 export default () => {
-  return (
-    <ThemeProvider darkMode={false} theme={theme}>
-      <Container backgroundColor="primary">
-        <Header backgroundColor="myColor">
-          <Text color="primary" fontSize="normal">
-            Primary theme
-          </Text>
-          <Text color="myTextColor" fontSize="myFontSize">
-            Custom theme
-          </Text>
-        </Header>
-      </Container>
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider darkMode={false} theme={theme}>
+            <Container backgroundColor="primary">
+                <Header backgroundColor="myColor">
+                    <Text color="primary" fontSize="normal">
+                        Primary theme
+                    </Text>
+                    <Text color="myTextColor" fontSize="myFontSize">
+                        Custom theme
+                    </Text>
+                </Header>
+            </Container>
+        </ThemeProvider>
+    );
 };
-
 ```
 
 ### SimpleBackgroundColor
 
-```
-type SimpleBackgroundColor = string | 'primary' | 'secondary' |'accent' | undefined;
+```ts
+type SimpleBackgroundColor =
+    | string
+    | 'primary'
+    | 'secondary'
+    | 'accent'
+    | undefined;
 ```
 
 ### SimpleTextColor
 
-```
+```ts
 export type SimpleTextColor = string | 'primary' | 'secondary' | undefined;
 ```
 
 ### SimpleFontSize
 
-```
-export type SimpleFontSize = string
+```ts
+export type SimpleFontSize =
+    | string
     | 'small'
     | 'normal'
     | 'medium'
@@ -256,28 +270,44 @@ export type SimpleFontSize = string
     | undefined;
 ```
 
+### SimpleShadow
+
+```ts
+interface Shadow {
+    shadowColor: string;
+    shadowOffset: {
+        width: number;
+        height: number;
+    };
+    shadowOpacity: number;
+    shadowRadius: number;
+    elevation: number;
+}
+
+export type SimpleFontSize = 'default' | undefined | Shadow | null | undefined;
+```
+
 ## Theming with Typescript
 
-```
+```tsx
 import { SimpleTheme, Text } from 'react-native-simple';
 
 const myTheme: SimpleTheme = {
-  typography: {
-    primaryFont: 'Rubik_500Medium',
-    fontSize: {
-      myFontSize: 31,
+    typography: {
+        primaryFont: 'Rubik_500Medium',
+        fontSize: {
+            myFontSize: 31,
+        },
     },
-  },
-  someTextStyle:{
-    color:'#313131'
-  }
+    someTextStyle: {
+        color: '#313131',
+    },
 };
 
 type ThemeType = typeof myTheme;
 
 const ThemeComponent = () => {
-  const theme = useTheme<ThemeType>();
-  return <Text style={theme.someTextStyle}></Text>;
+    const theme = useTheme<ThemeType>();
+    return <Text style={theme.someTextStyle}></Text>;
 };
-
 ```
