@@ -1,8 +1,8 @@
 const siteConfig = {
-    title: 'React Native Simple', // Title for your website.
+    title: 'React Native Simple',
     tagline: 'Simple components for React Native',
-    url: 'https://matinap.github.io/react-native-simple/', // Your website URL
-    baseUrl: '/',
+    url: 'https://matinap.github.io/react-native-simple/',
+    baseUrl: '/react-native-simple/',
     usePrism: ['jsx'],
     projectName: 'React Native Simple',
     organizationName: 'MateuszNapieralski',
