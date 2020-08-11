@@ -43,7 +43,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "website" ]; then
                 git config --global user.email $GH_EMAIL
                 git config --global user.name $GH_NAME
-                echo "machine github.com login $GH_NAME password $GH_TOKEN" > ~/.netrc
+                echo "machine github.com login $GH_NAME password $GITHUB_TOKEN" > ~/.netrc
                 export GIT_USER=matiNap
                 export CURRENT_BRANCH=website
                 export USE_SSH=true
