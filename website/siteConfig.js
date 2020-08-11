@@ -4,7 +4,7 @@ const siteConfig = {
     url: 'https://matinap.github.io/react-native-simple/',
     baseUrl: '/react-native-simple/',
     usePrism: ['jsx'],
-    projectName: 'React Native Simple',
+    projectName: 'react-native-simple',
     organizationName: 'MateuszNapieralski',
     headerLinks: [
         { doc: 'getting-started', label: 'Docs' },
