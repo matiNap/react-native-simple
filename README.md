@@ -3,9 +3,7 @@
 [![npm version](https://badge.fury.io/js/react-native-simple.svg)](https://badge.fury.io/js/react-native-simple)
 
 # Installation
-
 `npm install react-native-simple react-native-reanimated react-native-gesture-handler`
 
 # Documentation
-
 https://matinap.github.io/react-native-simple/
