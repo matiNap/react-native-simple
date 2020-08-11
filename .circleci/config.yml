@@ -45,8 +45,6 @@ jobs:
                 git config --global user.name $GH_NAME
                 echo "machine github.com login $GH_NAME password $GITHUB_TOKEN" > ~/.netrc
                 export GIT_USER=matiNap
-                export CURRENT_BRANCH=website
-                export USE_SSH=true
                 cd website && npm install && npm run publish-gh-pages
             fi
       #Upload to npm
