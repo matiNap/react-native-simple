@@ -72,5 +72,10 @@ export interface ThemeType {
 }
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+export type RecursivePartialAddition<T> = {
+    [P in keyof T]?: RecursivePartial<T[P]> & { [key: string]: any };
+};
 
-export type SimpleTheme = RecursivePartial<ThemeType> & { [key: string]: any };
+export type SimpleTheme = RecursivePartialAddition<ThemeType> & {
+    [key: string]: any;
+};
