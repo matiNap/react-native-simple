@@ -8,7 +8,7 @@ const siteConfig = {
     organizationName: 'MateuszNapieralski',
     headerLinks: [
         { doc: 'getting-started', label: 'Docs' },
-        { doc: 'doc4', label: 'Examples' },
+        { doc: 'sign-in', label: 'Examples' },
         {
             href: 'https://github.com/matiNap/react-native-simple',
             label: 'GitHub',
