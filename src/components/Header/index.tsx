@@ -11,6 +11,7 @@ const FIXED_STYLE = {
     top: 0,
     left: 0,
 };
+
 export default ({ children, ...props }: Props) => {
     const theme = useTheme();
     const { currentPalette, Header } = theme;
@@ -60,5 +61,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        paddingHorizontal: 10,
     },
 });
