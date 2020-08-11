@@ -1,0 +1,18 @@
+.navGroupCategoryTitle {
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+}
+
+.navItem {
+    font-size: 1.05rem !important;
+}
+
+.navListItem {
+    padding-left: 0.5rem !important;
+}
+
+.navListItemActive {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
