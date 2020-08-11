@@ -13,12 +13,19 @@ export const getShadow = (shadow: SimpleShadow) => {
     } else return shadow;
 };
 
+const isRgba = (value: string) => {
+    const head = value.slice(0, 4);
+
+    if (head === 'rgba') return true;
+    return false;
+};
+
 export const getThemeColor = (
     value: SimpleBackgroundColor | SimpleTextColor,
     data: { [key: string]: any },
 ): string | null => {
     if (value) {
-        if (value[0] === '#') return value;
+        if (value[0] === '#' || isRgba(value)) return value;
         else return data[value];
     } else return null;
 };
