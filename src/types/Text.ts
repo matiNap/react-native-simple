@@ -1,9 +1,11 @@
 import { SimpleFontSize, SimpleTextColor } from '.';
-import { TextStyle, StyleProp } from 'react-native';
+import { TextStyle, StyleProp, TextProperties } from 'react-native';
 
-export default interface Props {
-    children: string;
+export interface LocalTextProps {
     fontSize?: SimpleFontSize;
     color?: SimpleTextColor;
     style?: StyleProp<TextStyle>;
+}
+export default interface Props extends TextProperties, LocalTextProps {
+    children: string;
 }

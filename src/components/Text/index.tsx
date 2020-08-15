@@ -14,12 +14,14 @@ export default ({ children, ...props }: Props) => {
         getThemeColor(props.color, currentPalette.text),
     ]);
     const fontSize = getProperty([
+        typography.fontSize.normal,
         textStyle?.fontSize,
         getThemeNumber(props.fontSize, typography.fontSize),
     ]);
 
     return (
         <Text
+            {...props}
             style={StyleSheet.flatten([
                 {
                     fontFamily: typography.primaryFont,
