@@ -1,8 +1,11 @@
 import { StyleProp, ViewStyle } from 'react-native';
 import { SimpleBackgroundColor } from './index';
 
-export default interface ContainerProps {
-    children?: React.ReactNode;
+export interface LocalContainerProps {
     style?: StyleProp<ViewStyle>;
     backgroundColor?: SimpleBackgroundColor;
+}
+
+export default interface ContainerProps extends LocalContainerProps {
+    children?: React.ReactNode;
 }

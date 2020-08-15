@@ -2,8 +2,7 @@ import { StyleProp, ViewStyle } from 'react-native';
 import { ReactNode } from 'react';
 import { SimpleBackgroundColor } from '.';
 
-export default interface Props {
-    children: ReactNode[] | ReactNode;
+export interface LocalRowProps {
     style?: StyleProp<ViewStyle>;
     backgroundColor?: SimpleBackgroundColor;
     width?: string | number;
@@ -23,4 +22,8 @@ export default interface Props {
         | 'stretch'
         | 'baseline'
         | undefined;
+}
+
+export default interface Props extends LocalRowProps {
+    children: ReactNode[] | ReactNode;
 }
