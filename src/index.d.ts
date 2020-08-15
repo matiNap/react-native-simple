@@ -1,5 +1,6 @@
 import Container from './components/Container';
 import Column from './components/Column';
+import ImageGallery from './components/ImageGallery';
 import Row from './components/Row';
 import Header from './components/Header';
 import Text from './components/Text';
@@ -30,4 +31,5 @@ export {
     ListItem,
     DraggableElement,
     SortableList,
+    ImageGallery,
 };
