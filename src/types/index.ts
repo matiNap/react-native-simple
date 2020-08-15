@@ -1,5 +1,5 @@
 import RowProps from './Row';
-import SimpleTextProps from './Text';
+import { LocalTextProps } from './Text';
 import HeaderProps from './Header';
 import ColumnProps from './Column';
 import ButtonProps from './Button';
@@ -11,13 +11,13 @@ export type SimpleBackgroundColor =
     | 'secondary'
     | 'accent'
     | undefined;
-export type SimpleTextColor = string | 'primary' | 'secondary' | undefined;
+export type SimpleTextColor = 'primary' | 'secondary' | string | undefined;
 export type SimpleFontSize =
-    | string
     | 'small'
     | 'normal'
     | 'medium'
     | 'big'
+    | string
     | number
     | undefined;
 interface Shadow {
@@ -65,12 +65,17 @@ export interface ThemeType {
     Container?: RecursivePartial<RowProps>;
     Row?: RecursivePartial<RowProps>;
     Column?: RecursivePartial<ColumnProps>;
-    Text?: RecursivePartial<SimpleTextProps>;
+    Text?: RecursivePartial<LocalTextProps>;
     Header?: RecursivePartial<HeaderProps>;
     Button?: RecursivePartial<ButtonProps>;
     Input?: RecursivePartial<InputProps>;
 }
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
+export type RecursivePartialAddition<T> = {
+    [P in keyof T]?: RecursivePartial<T[P]> & { [key: string]: any };
+};
 
-export type SimpleTheme = RecursivePartial<ThemeType> & { [key: string]: any };
+export type SimpleTheme = RecursivePartialAddition<ThemeType> & {
+    [key: string]: any;
+};
