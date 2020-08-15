@@ -6,7 +6,7 @@ exports[`Text component Should render 1`] = `
     Object {
       "color": "#333333",
       "fontFamily": undefined,
-      "fontSize": null,
+      "fontSize": 20,
     }
   }
 >
@@ -16,11 +16,12 @@ exports[`Text component Should render 1`] = `
 
 exports[`Text component Should render text color 1`] = `
 <Text
+  color="primary"
   style={
     Object {
       "color": "#333333",
       "fontFamily": undefined,
-      "fontSize": null,
+      "fontSize": 20,
     }
   }
 >
@@ -30,6 +31,7 @@ exports[`Text component Should render text color 1`] = `
 
 exports[`Text component Should render text fontSize 1`] = `
 <Text
+  fontSize="medium"
   style={
     Object {
       "color": "#333333",
@@ -49,7 +51,7 @@ exports[`Text component Should render with style 1`] = `
       "backgroundColor": "blue",
       "color": "#333333",
       "fontFamily": undefined,
-      "fontSize": null,
+      "fontSize": 20,
     }
   }
 >
