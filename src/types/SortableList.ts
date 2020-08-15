@@ -1,11 +1,10 @@
 import { ReactNode } from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 
-interface Props {
+export default interface Props {
     children: ReactNode[];
     style?: StyleProp<ViewStyle>;
     itemHeight: number;
+    disabled: boolean;
     onReorder: (draggedIndex: number, swtichedWithIndex: number) => void;
 }
-
-export type SortableListProps = Props;
