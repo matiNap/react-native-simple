@@ -3,15 +3,18 @@ import { ReactNode } from 'react';
 import { SimpleBackgroundColor, SimpleShadow } from '.';
 
 export type VariantType = 'outlined' | 'filled' | 'empty';
-export default interface ButtonProps {
-    style?: StyleProp<ViewStyle>;
-    labelStyle?: StyleProp<TextStyle>;
-    title?: string;
-    startIcon?: ReactNode;
-    endIcon?: ReactNode;
+
+export interface LocalButtonProps {
     buttonColor?: SimpleBackgroundColor;
     variant?: VariantType;
     shadow?: SimpleShadow;
+    style?: StyleProp<ViewStyle>;
+    labelStyle?: StyleProp<TextStyle>;
+}
+export default interface ButtonProps extends LocalButtonProps {
+    title?: string;
+    startIcon?: ReactNode;
+    endIcon?: ReactNode;
     onPress?: () => void;
     enabled?: boolean;
 }

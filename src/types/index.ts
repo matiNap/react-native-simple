@@ -1,9 +1,10 @@
-import RowProps from './Row';
+import { LocalRowProps } from './Row';
 import { LocalTextProps } from './Text';
-import HeaderProps from './Header';
-import ColumnProps from './Column';
-import ButtonProps from './Button';
-import { InputProps } from './Input';
+import { LocalHeaderProps } from './Header';
+import { LocalColumnProps } from './Column';
+import { LocalButtonProps } from './Button';
+import { InputProps, LocalInputProps } from './Input';
+import { LocalContainerProps } from './Container';
 
 export type SimpleBackgroundColor =
     | string
@@ -62,13 +63,13 @@ export interface ThemeType {
     palette: Palette;
     paletteDark: Palette;
     typography: Typography;
-    Container?: RecursivePartial<RowProps>;
-    Row?: RecursivePartial<RowProps>;
-    Column?: RecursivePartial<ColumnProps>;
+    Container?: RecursivePartial<LocalContainerProps>;
+    Row?: RecursivePartial<LocalRowProps>;
+    Column?: RecursivePartial<LocalColumnProps>;
     Text?: RecursivePartial<LocalTextProps>;
-    Header?: RecursivePartial<HeaderProps>;
-    Button?: RecursivePartial<ButtonProps>;
-    Input?: RecursivePartial<InputProps>;
+    Header?: RecursivePartial<LocalHeaderProps>;
+    Button?: RecursivePartial<LocalButtonProps>;
+    Input?: RecursivePartial<LocalInputProps>;
 }
 
 export type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };

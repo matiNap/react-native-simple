@@ -1,8 +1,7 @@
 import { StyleProp, ViewStyle } from 'react-native';
 import { ReactNode } from 'react';
 
-export default interface ColumnProps {
-    children: ReactNode[] | ReactNode;
+export interface LocalColumnProps {
     style?: StyleProp<ViewStyle>;
     backgroundColor?: string;
     height?: string;
@@ -22,4 +21,8 @@ export default interface ColumnProps {
         | 'stretch'
         | 'baseline'
         | undefined;
+}
+
+export default interface ColumnProps extends LocalColumnProps {
+    children: ReactNode[] | ReactNode;
 }

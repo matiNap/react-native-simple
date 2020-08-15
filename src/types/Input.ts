@@ -3,17 +3,14 @@ import { SimpleShadow, SimpleBackgroundColor, SimpleTextColor } from '.';
 import { ReactNode } from 'react';
 
 export type InputVariant = 'filled' | 'outlined' | 'empty';
-
-interface Props {
-    endIcon?: ReactNode;
-    startIcon?: ReactNode;
+export interface LocalInputProps {
     containerStyle?: StyleProp<ViewStyle>;
     shadow?: SimpleShadow;
     backgroundColor?: SimpleBackgroundColor;
     color?: SimpleTextColor;
     borderColor?: SimpleBackgroundColor;
 }
-
-export type InputProps = TextInputProperties & Props;
-
-export default Props;
+export default interface Props extends LocalInputProps, TextInputProperties {
+    endIcon?: ReactNode;
+    startIcon?: ReactNode;
+}
