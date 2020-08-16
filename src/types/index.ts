@@ -3,7 +3,7 @@ import { LocalTextProps } from './Text';
 import { LocalHeaderProps } from './Header';
 import { LocalColumnProps } from './Column';
 import { LocalButtonProps } from './Button';
-import { InputProps, LocalInputProps } from './Input';
+import { LocalInputProps } from './Input';
 import { LocalContainerProps } from './Container';
 
 export type SimpleBackgroundColor =

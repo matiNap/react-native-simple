@@ -12,10 +12,10 @@ import Animated, {
     call,
     add,
 } from 'react-native-reanimated';
-import { DraggableElementProps as Props } from '../../types/DraggableElement';
+import Props from '../../types/DraggableElement';
 import { onGestureEvent, withSpringTransition } from 'react-native-redash';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 const withSnap = ({
     value,
@@ -43,6 +43,7 @@ export default ({
     myIndex,
     onReorder,
     offsets,
+    ...props
 }: Props) => {
     const {
         state,
@@ -85,7 +86,8 @@ export default ({
                 offsets.map((offset, index) => [
                     cond(and(eq(offset, offsetY), eq(state, State.ACTIVE)), [
                         call([], () => {
-                            if (index !== myIndex) onReorder(myIndex, index);
+                            if (index !== myIndex && onReorder)
+                                onReorder(myIndex, index);
                         }),
                         set(offset, currentOffset),
                         set(currentOffset, offsetY),
@@ -96,18 +98,20 @@ export default ({
     );
 
     return (
-        <PanGestureHandler {...gestureHandler}>
-            <Animated.View
-                style={{
-                    ...styles.container,
-                    zIndex,
-                    height,
-                    transform: [{ translateY: translateY }],
-                }}
-            >
-                {children}
-            </Animated.View>
-        </PanGestureHandler>
+        <View pointerEvents={props.disabled ? 'none' : 'auto'}>
+            <PanGestureHandler {...gestureHandler}>
+                <Animated.View
+                    style={{
+                        ...styles.container,
+                        zIndex,
+                        height,
+                        transform: [{ translateY: translateY }],
+                    }}
+                >
+                    {children}
+                </Animated.View>
+            </PanGestureHandler>
+        </View>
     );
 };
 

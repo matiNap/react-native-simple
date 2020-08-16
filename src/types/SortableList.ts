@@ -5,6 +5,6 @@ export default interface Props {
     children: ReactNode[];
     style?: StyleProp<ViewStyle>;
     itemHeight: number;
-    disabled: boolean;
-    onReorder: (draggedIndex: number, swtichedWithIndex: number) => void;
+    onReorder?: (draggedIndex: number, swtichedWithIndex: number) => void;
+    disabled?: boolean;
 }
