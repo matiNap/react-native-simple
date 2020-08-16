@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
-import { InputProps } from '../../types/Input';
+import InputProps from '../../types/Input';
 import useTheme from '../ThemeProvider/useTheme';
 import { getProperty, getShadow, getThemeColor } from '../../helpers';
 

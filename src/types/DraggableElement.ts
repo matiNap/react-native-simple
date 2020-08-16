@@ -1,13 +1,12 @@
 import { ReactNode } from 'react';
 import Animated from 'react-native-reanimated';
 
-interface Props {
+export default interface Props {
     children: ReactNode;
     y: Animated.Value<number>;
-    onReorder: (draggedIndex: number, swtichedWithIndex: number) => void;
+    onReorder?: (draggedIndex: number, swtichedWithIndex: number) => void;
     height: number;
     myIndex: number;
     offsets: Animated.Value<number>[];
+    disabled?: boolean;
 }
-
-export type DraggableElementProps = Props;
