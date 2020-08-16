@@ -12,7 +12,7 @@ export default ({ children, itemHeight, onReorder, disabled }: Props) => {
         const listHeight = offsets.length * itemHeight;
 
         return { offsets, listHeight };
-    }, []);
+    }, [children, itemHeight]);
     return (
         <ScrollView
             contentContainerStyle={{ height: listHeight, width: '100%' }}
