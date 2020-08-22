@@ -10,7 +10,8 @@
             "button",
             "header",
             "sortable-list",
-            "list-item"
+            "list-item",
+            "image-gallery"
         ],
         "Examples": ["sign-in"]
     }

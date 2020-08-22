@@ -33,6 +33,10 @@
         "title": "Header",
         "sidebar_label": "Header"
       },
+      "image-gallery": {
+        "title": "ImageGallery",
+        "sidebar_label": "ImageGallery"
+      },
       "input": {
         "title": "Input",
         "sidebar_label": "Input"
