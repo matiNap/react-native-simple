@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
 import Animated from 'react-native-reanimated';
+import { GestureHandlerType } from './DraggableController';
 
 export default interface Props {
-    children: ReactNode;
+    controller: React.ComponentType<{ gestureHandler: GestureHandlerType }>;
     y: Animated.Value<number>;
     onReorder?: (draggedIndex: number, swtichedWithIndex: number) => void;
     height: number;
