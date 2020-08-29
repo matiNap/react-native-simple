@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { useMemo } from 'react';
 import Animated, {
     cond,
@@ -14,7 +15,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import Props from '../../types/DraggableElement';
 import { onGestureEvent, withSpringTransition } from 'react-native-redash';
-import { PanGestureHandler, State } from 'react-native-gesture-handler';
+import { State } from 'react-native-gesture-handler';
 import { StyleSheet, View } from 'react-native';
 
 const withSnap = ({
@@ -38,12 +39,11 @@ const withSnap = ({
 
 export default ({
     y: currentOffset,
-    children,
+    controller,
     height,
     myIndex,
     onReorder,
     offsets,
-    ...props
 }: Props) => {
     const {
         state,
@@ -96,21 +96,19 @@ export default ({
             ]),
         [currentOffset, offsetY, offsets, state],
     );
-
+    const Child = controller;
     return (
-        <View pointerEvents={props.disabled ? 'none' : 'auto'}>
-            <PanGestureHandler {...gestureHandler}>
-                <Animated.View
-                    style={{
-                        ...styles.container,
-                        zIndex,
-                        height,
-                        transform: [{ translateY: translateY }],
-                    }}
-                >
-                    {children}
-                </Animated.View>
-            </PanGestureHandler>
+        <View>
+            <Animated.View
+                style={{
+                    ...styles.container,
+                    zIndex,
+                    height,
+                    transform: [{ translateY: translateY }],
+                }}
+            >
+                {<Child {...{ gestureHandler }} />}
+            </Animated.View>
         </View>
     );
 };

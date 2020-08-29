@@ -29,9 +29,8 @@ export default ({ children, itemHeight, onReorder, disabled }: Props) => {
                         }}
                         myIndex={index}
                         y={offsets[index]}
-                    >
-                        {child}
-                    </DraggableElement>
+                        controller={child}
+                    />
                 );
             })}
         </ScrollView>

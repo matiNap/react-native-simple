@@ -10,63 +10,86 @@ SortableList allow changing order in list
 
 ![Header](assets/component-sortable-list.gif)
 
-```js
+```tsx
 import React from 'react';
-import { Container, SortableList, Row, Text } from 'react-native-simple';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import {
+  Text,
+  Container,
+  SortableList,
+  DraggableController,
+} from 'rns';
 
-const DATA = [
-    {
-        id: '1',
-        content: 'item1',
-    },
-    {
-        id: '2',
-        content: 'item2',
-    },
-    {
-        id: '3',
-        content: 'item3',
-    },
-    {
-        id: '4',
-        content: 'item4',
-    },
+const data = [
+  {
+    label: 'Item 1',
+    id: '1',
+  },
+  {
+    label: 'Item 2',
+    id: '2',
+  },
+  {
+    label: 'Item 3',
+    id: '3',
+  },
+  {
+    label: 'Item 4',
+    id: '4',
+  },
+  {
+    label: 'Item 5',
+    id: '5',
+  },
+  {
+    label: 'Item 6',
+    id: '6',
+  },
 ];
-const ITEM_HEIGHT = 60;
 
 export default () => {
-    return (
-        <Container>
-            <SortableList
-                style={styles.listContainer}
-                itemHeight={ITEM_HEIGHT}
-                onReorder={(draggedIndex, switchedWithIndex) => {}}
+  return (
+    <Container style={styles.container}>
+      <SortableList
+        itemHeight={80}
+        disabled={true}
+        onReorder={() => {}}
+      >
+        {data.map((data) => ({ gestureHandler }) => {
+          return (
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+              }}
             >
-                {DATA.map(({ content, id }) => (
-                    <Row justifyContent="center" key={id} style={styles.card}>
-                        <Text>{content}</Text>
-                    </Row>
-                ))}
-            </SortableList>
-        </Container>
-    );
+              <Text>{data.label}</Text>
+              <DraggableController {...{ gestureHandler }}>
+                <View style={{ padding: 10 }}>
+                  <MaterialIcons name="drag-handle" size={30} />
+                </View>
+              </DraggableController>
+            </View>
+          );
+        })}
+      </SortableList>
+    </Container>
+  );
 };
 
 const styles = StyleSheet.create({
-    listContainer: {
-        marginTop: 30,
-        height: '100%',
-    },
-    card: {
-        borderTopWidth: 1,
-        borderColor: 'rgba(0, 0, 0, 0.3)',
-        borderBottomWidth: 1,
-        backgroundColor: 'white',
-
-        height: ITEM_HEIGHT,
-    },
+  container: {
+    flex: 1,
+    paddingTop: 30,
+  },
+  counter: {
+    position: 'absolute',
+    bottom: 10,
+    right: 10,
+  },
 });
+
 ```
 
 ## Props
