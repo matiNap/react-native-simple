@@ -29,8 +29,11 @@ export default ({ children, ...props }: Props) => {
     ]);
     const borderRadius = radiusProperty ? radiusProperty : 0;
     const height = getProperty([DEFAULT_HEIGHT, Header?.height, props.height]);
-    const paddingTop = translucent ? metrics.statusBarHeight + 10 : 0;
-    const shadow = getProperty([Header?.shadow, getShadow(props.shadow)]);
+    const paddingTop = translucent ? metrics.statusBarHeight + 5 : 0;
+    const shadow = getProperty([
+        getShadow(Header?.shadow),
+        getShadow(props.shadow),
+    ]);
     const fixedStyle = fixed ? FIXED_STYLE : {};
 
     return (
@@ -49,7 +52,7 @@ export default ({ children, ...props }: Props) => {
                 style,
             ])}
         >
-            {children}
+            <View style={styles.subContainer}>{children}</View>
         </View>
     );
 };
@@ -58,9 +61,12 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         zIndex: 160,
+        paddingHorizontal: 10,
+    },
+    subContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingHorizontal: 10,
+        width: '100%',
     },
 });

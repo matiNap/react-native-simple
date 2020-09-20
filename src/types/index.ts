@@ -32,7 +32,7 @@ interface Shadow {
     elevation: number;
 }
 
-export type SimpleShadow = 'default' | Shadow | null | undefined;
+export type SimpleShadow = 'default' | Shadow | null | undefined | any;
 
 export interface Palette {
     primary: string;
